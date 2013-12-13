@@ -5,7 +5,7 @@ import messages
 
 class NonPlayerCharacter(object):
 	"""Creating a class for NPCs"""
-	def __init__(CAMPERS[name], cclass=None, hit_points=0, current_hit_points=0,
+	def __init__(name, cclass=None, hit_points=0, current_hit_points=0,
 		     attack_skill=20, dead=False, status=None, gender=None):
 	    self.name = name
 	    self.cclass = cclass
