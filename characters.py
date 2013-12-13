@@ -14,13 +14,12 @@ class NonPlayerCharacter(object):
 	    self.attack_skill = attack_skill
 	    self.dead = dead
 	    self.status = status
-        
-	def __str__(self):
-	    print ('%s: Attack Skill = %d/100, Character Class = %d,
-	           Hit Points = %d/%d, Status: %s') % (self.name, self.attack_skill,
-		   self.cclass, self.hit_points, self.current_hit_points, self.status)
 
-class Camper(NonPlayerCharacter
+	def __str__(self):
+	    print ('%s: Attack Skill = %d/100, Character Class = %d, Hit Points = %d/%d, Status: %s') % (
+        self.name, self.attack_skill, self.cclass, self.hit_points, self.current_hit_points, self.status)
+
+# class Camper(NonPlayerCharacter
 
 
 MAJOR_NPCS = {
@@ -102,26 +101,33 @@ DISPO_COUNTER = {
 }
 
 def get_campers(gender=None):
+  """Get all campers of a specific gender, or all campers if gender is empty."""
   if gender:
     return [c for (c, g) in CAMPER_GENDER.items() if g == gender]
   else:
     return CAMPERS
 
 def random_camper(gender=None):
+  """Select a camper at random, given an optional gender."""
   return random.choice(get_campers(gender))
 
 def random_camper_sample(count, gender=None):
+  """Return a random sample of campers, given an optional gender."""
   return random.sample(get_campers(gender), 5)
 
 def name(key):
+  """Get the name of a camper or NPC."""
   return CAMPERS.get(key) or MAJOR_NPCS[key]
 
 def choice_list(people):
+  """Given a list of people (campers or NPCs), returns a choice list with
+  numbers and names."""
   names = (name(p) for p in people)
   choices = ('%d. %s' % (i + 1, name) for (i, name) in enumerate(names))
   return '\n\n'.join(choices)
 
 def choose_person(people, message):
+  """Choose a specific person from a list of people."""
   message = message + choice_list(people) + messages.REQUEST_A_NUMBER
   while True:
     choice = raw_input(message)
