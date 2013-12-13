@@ -28,16 +28,16 @@ def welcome_screen():
 
   print 'Your name is Pickett %s' % LAST_NAME
 
-  messages.print_messages(
+  messages.print_messages([
     messages.EXPLANATION,
     messages.BUS_LOADING,
     messages.CRACK,
-    messages.GAME_KID_LOST)
+    messages.GAME_KID_LOST])
 
   return week_one(DAY)
 
 def week_one(day):
-  messages.print_messages(*messages.WEEK_ONE[day])
+  messages.print_messages(messages.WEEK_ONE[day])
   campers = characters.random_character_sample(cclass='Camper', count=5)
   people_outside_theater = campers + [characters.TROID]
 

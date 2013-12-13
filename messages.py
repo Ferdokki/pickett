@@ -2,7 +2,7 @@ ENTER = """
 
 <Press Enter to continue>"""
 
-def print_messages(*messages):
+def print_messages(messages):
   """Print a bunch of messages."""
   for m in messages:
     raw_input(m + ENTER)
