@@ -1,10 +1,16 @@
 import random
-import messages
 
-#Creating NPC Classes
+import messages
 
 class Character(object):
   CHARACTERS = set()
+  FORMAT = ' '.join(
+    ('{0.name}:',
+     'Attack Skill = {0.attack_skill}/100,',
+     'Character Class = {0.cclass},',
+     'Hit Points = {0.current_hit_points}/{0.hit_points},',
+     'Status: {0.status},',
+     'Gender: {0.gender}'))
 
   def __init__(self, name, hit_points=0, current_hit_points=0,
                attack_skill=20, dead=False, status=None, gender=None):
@@ -18,8 +24,7 @@ class Character(object):
     Character.CHARACTERS.add(self)
 
   def __str__(self):
-    print ('%s: Attack Skill = %d/100, Character Class = %d, Hit Points = %d/%d, Status: %s, Gender: %s') % (
-        self.name, self.attack_skill, self.cclass, self.hit_points, self.current_hit_points, self.status, self.gender)
+    return self.FORMAT.format(self)
 
 class NonPlayerCharacter(Character):
   cclass = 'NPC'
