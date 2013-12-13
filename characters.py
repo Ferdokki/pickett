@@ -9,13 +9,15 @@ class Character(object):
             'Character Class = {0.cclass}, '
             'Hit Points = {0.current_hit_points}/{0.hit_points}, '
             'Status: {0.status}, '
-            'Gender: {0.gender}')
+            'Gender: {0.gender}'
+	    'Disposition: {0.dispo}')
 
-  def __init__(self, name, hit_points=0, current_hit_points=0,
+  def __init__(self, name, hit_points=0, current_hit_points=0, dispo=0,
                attack_skill=20, dead=False, status=None, gender=None):
     self.name = name
     self.hit_points = hit_points
     self.current_hit_points = current_hit_points
+    self.dispo = dispo
     self.attack_skill = attack_skill
     self.dead = dead
     self.status = status
@@ -55,7 +57,7 @@ Camper('Gelliot Yabelor', gender='m')
 Camper('Illetia Dorfson', gender='f')
 Camper('Kinser Talebearing', gender='m')
 Camper('Nugget Beano', gender='m')
-Camper('Niche Kaguya', gender='f')
+Camper('Niche Kaguya', gender='f')VESA Wall Mounting: 75x75mm
 Camper('Ninar Tetris', gender='f')
 Camper('Pooder Bennet', gender='m')
 Camper('Randy Buffet', gender='m')
