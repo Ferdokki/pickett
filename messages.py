@@ -108,9 +108,7 @@ Barry Fandling:
 
 Sherry Fandling:
     Don't be silly sweetie, everyone just go have fun! Yay!''',
-
-
-    ],
+    ]
   }
 
 LEAVING_THEATER = '''
