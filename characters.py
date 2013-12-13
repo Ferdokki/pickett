@@ -5,8 +5,8 @@ import messages
 
 class NonPlayerCharacter(object):
 	"""Creating a class for NPCs"""
-	def __init__(name, cclass=None, hit_points=0, current_hit_points=0,
-		     attack_skill=20, dead=False, status=None):
+	def __init__(CAMPERS[name], cclass=None, hit_points=0, current_hit_points=0,
+		     attack_skill=20, dead=False, status=None, gender=None):
 	    self.name = name
 	    self.cclass = cclass
 	    self.hit_points = hit_points
@@ -14,12 +14,19 @@ class NonPlayerCharacter(object):
 	    self.attack_skill = attack_skill
 	    self.dead = dead
 	    self.status = status
+	    self.gender = gender
 
 	def __str__(self):
-	    print ('%s: Attack Skill = %d/100, Character Class = %d, Hit Points = %d/%d, Status: %s') % (
-        self.name, self.attack_skill, self.cclass, self.hit_points, self.current_hit_points, self.status)
+		print ('%s: Attack Skill = %d/100, Character Class = %d, Hit Points = %d/%d, Status: %s, Gender: %s') % (
+        self.name, self.attack_skill, self.cclass, self.hit_points, self.current_hit_points, self.status, self.gender)
 
-# class Camper(NonPlayerCharacter
+
+class Camper(NonPlayerCharacter):
+	"""Creating a class for Campers"""
+	def __init__(name, camper_in_party=False):
+		super(Camper, self).__init__()
+		self.name = name
+		self.camper_in_party = camper_in_party
 
 
 MAJOR_NPCS = {
@@ -41,7 +48,6 @@ CAMPERS = {
   'gm': 'Gloobin Marfo',
   'gy': 'Gelliot Yabelor',
   'il': 'Illetia Dorfson',
-  'jf': 'Jupiter Fargo',
   'kt': 'Kinser Talebearing',
   'nb': 'Nugget Beano',
   'nk': 'Niche Kaguya',
