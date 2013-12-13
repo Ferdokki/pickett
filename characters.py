@@ -3,133 +3,82 @@ import messages
 
 #Creating NPC Classes
 
-class NonPlayerCharacter(object):
-	"""Creating a class for NPCs"""
-	def __init__(name, cclass=None, hit_points=0, current_hit_points=0,
-		     attack_skill=20, dead=False, status=None, gender=None):
-	    self.name = name
-	    self.cclass = cclass
-	    self.hit_points = hit_points
-	    self.current_hit_points = current_hit_points
-	    self.attack_skill = attack_skill
-	    self.dead = dead
-	    self.status = status
-	    self.gender = gender
+class Character(object):
+  CHARACTERS = set()
 
-	def __str__(self):
-		print ('%s: Attack Skill = %d/100, Character Class = %d, Hit Points = %d/%d, Status: %s, Gender: %s') % (
+  def __init__(self, name, hit_points=0, current_hit_points=0,
+               attack_skill=20, dead=False, status=None, gender=None):
+    self.name = name
+    self.hit_points = hit_points
+    self.current_hit_points = current_hit_points
+    self.attack_skill = attack_skill
+    self.dead = dead
+    self.status = status
+    self.gender = gender
+    Character.CHARACTERS.add(self)
+
+  def __str__(self):
+    print ('%s: Attack Skill = %d/100, Character Class = %d, Hit Points = %d/%d, Status: %s, Gender: %s') % (
         self.name, self.attack_skill, self.cclass, self.hit_points, self.current_hit_points, self.status, self.gender)
 
-
-class Camper(NonPlayerCharacter):
-	"""Creating a class for Campers"""
-	def __init__(name, camper_in_party=False):
-		super(Camper, self).__init__()
-		self.name = name
-		self.camper_in_party = camper_in_party
+class NonPlayerCharacter(Character):
+  cclass = 'NPC'
 
 
-MAJOR_NPCS = {
-  'ag': 'Angles Gator',
-  'bf': 'Barry Fandling',
-  'btf': 'Barret Falster',
-  'pw': 'Playton Williams',
-  'sf': 'Sherry Fandling',
-  't': 'Troid',
-  }
+class Camper(Character):
+  cclass = 'Camper'
 
-CAMPERS = {
-  'bd': 'Brent Drago',
-  'bl': 'Botany Lynn',
-  'br': 'Bnola Rae',
-  'bt': 'Boris Tortavich',
-  'ct': 'Can Tabber',
-  'fj': 'Freetus Jaunders',
-  'gm': 'Gloobin Marfo',
-  'gy': 'Gelliot Yabelor',
-  'il': 'Illetia Dorfson',
-  'kt': 'Kinser Talebearing',
-  'nb': 'Nugget Beano',
-  'nk': 'Niche Kaguya',
-  'nt': 'Ninar Tetris',
-  'pb': 'Pooder Bennet',
-  'rb': 'Randy Buffet',
-  'tn': 'Trinda Noober',
-  'tv': 'Trinoba Vyder',
-  'vt': 'Volga Toober',
-  'yk': 'Yeldstat Krong',
-  }
+  def __init__(self, name, camper_in_party=False, **kwds):
+    super(Camper, self).__init__(name, **kwds)
+    self.camper_in_party = camper_in_party
 
-CAMPER_GENDER = {
-  'bd': 'm',
-  'bl': 'f',
-  'br': 'f',
-  'bt': 'm',
-  'ct': 'm',
-  'fj': 'm',
-  'gm': 'm',
-  'gy': 'm',
-  'il': 'f',
-  'jf': 'f',
-  'kt': 'm',
-  'nb': 'm',
-  'nk': 'f',
-  'nt': 'f',
-  'pb': 'm',
-  'rb': 'm',
-  'tn': 'f',
-  'tv': 'f',
-  'vt': 'f',
-  'yk': 'f',
-  }
 
-DISPO_COUNTER = {
-  'pb': 0,
-  'jf': 0,
-  'rb': 0,
-  'bl': 0,
-  'bt': 0,
-  'tn': 0,
-  'fj': 0,
-  'nt': 0,
-  'gm': 0,
-  'nk': 0,
-  'bd': 0,
-  'vt': 0,
-  'kt': 0,
-  'br': 0,
-  'nb': 0,
-  'yk': 0,
-  'gy': 0,
-  'il': 0,
-  'ct': 0,
-  'tv': 0,
-}
+NonPlayerCharacter('Angles Gator', gender='')
+NonPlayerCharacter('Barry Fandling', gender='')
+NonPlayerCharacter('Barret Falster', gender='')
+NonPlayerCharacter('Playton Williams', gender='')
+NonPlayerCharacter('Sherry Fandling', gender='')
+TROID = NonPlayerCharacter('Troid', gender='')
 
-def get_campers(gender=None):
-  """Get all campers of a specific gender, or all campers if gender is empty."""
-  if gender:
-    return [c for (c, g) in CAMPER_GENDER.items() if g == gender]
-  else:
-    return CAMPERS
+Camper('Brent Drago', gender='m')
+Camper('Botany Lynn', gender='f')
+Camper('Bnola Rae', gender='f')
+Camper('Boris Tortavich', gender='m')
+Camper('Can Tabber', gender='m')
+Camper('Freetus Jaunders', gender='m')
+Camper('Gloobin Marfo', gender='m')
+Camper('Gelliot Yabelor', gender='m')
+Camper('Illetia Dorfson', gender='f')
+Camper('Kinser Talebearing', gender='m')
+Camper('Nugget Beano', gender='m')
+Camper('Niche Kaguya', gender='f')
+Camper('Ninar Tetris', gender='f')
+Camper('Pooder Bennet', gender='m')
+Camper('Randy Buffet', gender='m')
+Camper('Trinda Noober', gender='f')
+Camper('Trinoba Vyder', gender='')
+Camper('Volga Toober', gender='f')
+Camper('Yeldstat Krong', gender='f')
 
-def random_camper(gender=None):
-  """Select a camper at random, given an optional gender."""
-  return random.choice(get_campers(gender))
 
-def random_camper_sample(count, gender=None):
-  """Return a random sample of campers, given an optional gender."""
-  return random.sample(get_campers(gender), 5)
+def get_characters(cclass=None, gender=None):
+  results = []
+  for c in Character.CHARACTERS:
+    if (cclass is None or c.cclass == cclass) and (
+        gender is None or c.gender == gender):
+      results.append(c)
+  return results
 
-def name(key):
-  """Get the name of a camper or NPC."""
-  return CAMPERS.get(key) or MAJOR_NPCS[key]
+def random_character(cclass=None, gender=None):
+  return random.choice(get_characters(cclass=cclass, gender=gender))
+
+def random_character_sample(count, cclass=None, gender=None):
+  return random.sample(get_characters(cclass=cclass, gender=gender), count)
 
 def choice_list(people):
   """Given a list of people (campers or NPCs), returns a choice list with
   numbers and names."""
-  names = (name(p) for p in people)
-  choices = ('%d. %s' % (i + 1, name) for (i, name) in enumerate(names))
+  choices = ('%d. %s' % (i + 1, p.name) for (i, p) in enumerate(people))
   return '\n\n'.join(choices)
 
 def choose_person(people, message):

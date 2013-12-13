@@ -24,7 +24,7 @@ def welcome_screen():
   raw_input(messages.WELCOME)
 
   LAST_NAME = raw_input(messages.LAST_NAME)
-  BULLY = characters.random_camper(gender='m')
+  BULLY = characters.random_character(cclass='Camper', gender='m')
 
   print 'Your name is Pickett %s' % LAST_NAME
 
@@ -38,7 +38,8 @@ def welcome_screen():
 
 def week_one(day):
   messages.print_messages(*messages.WEEK_ONE[day])
-  people_outside_theater = characters.random_camper_sample(5) + ['t']
+  campers = characters.random_character_sample(cclass='Camper', count=5)
+  people_outside_theater = campers + [characters.TROID]
 
   person = characters.choose_person(
     people_outside_theater, messages.LEAVING_THEATER)
