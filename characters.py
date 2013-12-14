@@ -3,14 +3,19 @@ import random
 import messages
 
 class Character(object):
+  """Abstract base class for all characters in the game.
+  Other interesting information here.
+  """
+  DESCRIPTION_STRING = (
+    '{0.name}: '
+    'Attack Skill = {0.attack_skill}/100, '
+    'Character Class = {0.cclass}, '
+    'Hit Points = {0.current_hit_points}/{0.hit_points}, '
+    'Status: {0.status}, '
+    'Gender: {0.gender}'
+    'Disposition: {0.dispo}')
+
   CHARACTERS = set()
-  FORMAT = ('{0.name}: '
-            'Attack Skill = {0.attack_skill}/100, '
-            'Character Class = {0.cclass}, '
-            'Hit Points = {0.current_hit_points}/{0.hit_points}, '
-            'Status: {0.status}, '
-            'Gender: {0.gender}'
-	    'Disposition: {0.dispo}')
 
   def __init__(self, name, hit_points=0, current_hit_points=0, dispo=0,
                attack_skill=20, dead=False, status=None, gender=None):
@@ -22,14 +27,14 @@ class Character(object):
     self.dead = dead
     self.status = status
     self.gender = gender
+
     Character.CHARACTERS.add(self)
 
   def __str__(self):
-    return self.FORMAT.format(self)
+    return self.DESCRIPTION_STRING.format(self)
 
 class NonPlayerCharacter(Character):
   cclass = 'NPC'
-
 
 class Camper(Character):
   cclass = 'Camper'
