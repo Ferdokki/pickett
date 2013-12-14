@@ -1,0 +1,81 @@
+﻿Pickett
+
+
+Game Script by Ray Weiss
+
+
+The year is 200X, & Pickett is a boy of about 10 who is being sent to spend 2 months at a summer camp. A cut scene shows Pickett getting into a bus and waving sadly at his parents. The music is happy and upbeat, kids are laughing, bus driver is whistling. The bus travels down the highway for a few hours, something small and black can be seen going in the same trajectory as the bus in the far off distance. The scene then goes into the bus where Pickett is sitting as time passes, and the screen goes to black.
+
+
+[Text appears on the screen]
+Bully: Hey you, kid, what are you playing?" (Bully is randomly determined, but is always a boy camper.) 
+
+
+Pickett: ...
+
+
+Bully: Hey kid, you listening to me?
+
+
+[Punch is heard with an additional high pitch noise]
+
+
+Disorienting music plays and text on the screen reads ["Pickett lost his Gamekid"]
+
+
+The bus continues to drive down the highway, upbeat music and all.
+A few hours later, the bus arrives at the summer camp. The sign reads, Mountain Head in bright blue lettering. The Bus comes to a stop, and A counselor walks onto the bus. 
+
+
+Troid: Alright kids, we're here, get off the bus and go to your bunks, no roughhousing! At least not on this bus, anything goes when you get off of this bus, just please get off the bus. 
+
+
+The kids all start to file off the bus one by one, and we get our first view of the camp. The main gate where the bus comes in leads into the Quad. Everything is very green and scenic, the Cafeteria & Office lie to the left, bunks straight ahead, with the basketball, lake, and soccer fields to the right. The scene is soothing to Pickett who looks a little more at ease once he arrives. Music gets sentimental as the scene pans towards several girls looking at Pickett and smiling while Pickett is seen talking and laughing with a few kids walking towards the bunk. The scene fades towards a completely clear sky, then fades to black. 
+
+
+The scene then switches to a bunch of kids all on wooden benches, not unlike a church. A low pitch is heard as the camera lowers onto Barry and Sherry Fandling, the owners of camp on a small wooden stage with curtains to the side. Pickett can be seen on the back right of the benches. Barry and Sherry are both wearing Urtha Weissman t-shirts. 
+
+
+[Text on screen: Orientation Night.]
+Barry Fandling: I want to welcome everyone to Mountain Head camp this year! Is everyone excited for this summer?
+
+
+[The room erupts in cheers & Barry puts his arm around Sherry] 
+ 
+Sherry Fandling: This is our Fifth year since we've bought the camp, and with your help, this is going to be the best summer yet. We've built new and improved facilities this year and everything is "ordained" to perfection! 
+ 
+Barry Fandling: Alright we would now like everyone to join us in our camp alma-mater. If you don’t know the words, follow along with the programs under the benches. 
+ 
+[Strange atonal out of time music starts to play and words appear on the screen as the screen darkens]
+ 
+Oh Hello Vast And Wondrous Universe
+ 
+Oh How Does The Vast Void Reveal Itself
+ 
+When The Light Reverses Its Once Sacred Purpose
+ 
+Then We Will All Know True Power & Discipline 
+ 
+[Atonal music stops and screen returns to normal]
+ 
+Barry Fandling: And with that we would like to welcome you to what we hope will be the best summer of your life! We hope you treat your fellow campers and staff with the same love and care we put into the camp and the surrounding grounds. 
+ 
+Sherry Fandling: Don't be silly sweetie, everyone just go have fun! [Throws hands up] Yay! 
+
+
+[The crowd starts to file out of the room and the scene fades to black] 
+
+
+[Screen then shows the area right outside of the theater. 5 random campers will be hanging outside the theater along with counselor Troid. 2 campers will be standing against the wall outside the door, another camper will be sitting on a tree stump, while 2 more campers will be walking around the area aimlessly.] 
+
+
+[Pickett will exit the theater and now the player can control him. This encounter will end as soon as Pickett moves off the bottom of the screen along the trail. Travel upwards will be prohibited]
+
+
+Troid: 1. Hey bro.
+         2. Oh man, its hot, no ladies here either, do you like soda?
+         [Yes.] [No.] [I’ve never tried soda.]
+         If [Yes.]: Yeah totally dude, I love feeling extreme.
+         If [No.]: Whatever bro. Smell you later.
+         If [I’ve never tried soda.]: What are you Amish? 
+3. (flexes muscles) Do you have a number for a vet? Cuz deez’ guns are SICK BRAH.
