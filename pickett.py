@@ -40,8 +40,10 @@ def week_one(day):
   messages.print_messages(messages.WEEK_ONE[day])
   campers = characters.random_character_sample(cclass='Camper', count=5)
   people_outside_theater = campers + [characters.TROID]
-
-  person = characters.choose_person(
-    people_outside_theater, messages.LEAVING_THEATER)
-
-  print 'You selected %s.' % person
+  
+  times_talked_outsidetheater = 0
+  while times_talked_outside_theater != 3:
+    person = characters.choose_person(
+      people_outside_theater, messages.LEAVING_THEATER)
+  
+    print 'You selected %s.' % person

@@ -24,8 +24,15 @@ class Conversation(object):
 
       raw_input(npc_speaking + 'Hey Bro.' + messages.ENTER) % self.npc
 
-      self.answer = raw_input(npc_speaking + 'Oh man, it\'s hot, no ' 
+      raw_input(npc_speaking + 'Oh man, it\'s hot, no ' 
       'ladies here either, do you like soda?' + messages.ENTER) 
+      
+      self.answer = raw_input('1: Yes, 2: No, 3:I\'ve never tried soda.'
+                      '\n\nSelect a valid choice :> ') 
 
-                              
+      if self.answer == '1':
+        characters.TROID.dispo += 1
+        raw_input('Yeah totally dude. '
+                  'I love feeling extreme')
+      
                 
