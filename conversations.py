@@ -25,7 +25,7 @@ class Conversation(object):
       raw_input(npc_speaking + 'Hey Bro.' + messages.ENTER) % self.npc
 
       self.answer = raw_input(npc_speaking + 'Oh man, it\'s hot, no ' 
-      'ladies here either, do you like soda?') #need to finish stuff here.
+      'ladies here either, do you like soda?' + messages.ENTER) 
 
                               
                 
