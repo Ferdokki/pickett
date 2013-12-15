@@ -44,12 +44,12 @@ class Camper(Character):
     self.camper_in_party = camper_in_party
 
 
-NonPlayerCharacter('Angles Gator', gender='')
-NonPlayerCharacter('Barry Fandling', gender='')
-NonPlayerCharacter('Barret Falster', gender='')
-NonPlayerCharacter('Playton Williams', gender='')
-NonPlayerCharacter('Sherry Fandling', gender='')
-TROID = NonPlayerCharacter('Troid', gender='')
+NonPlayerCharacter('Angles Gator', gender='m')
+NonPlayerCharacter('Barry Fandling', gender='m')
+NonPlayerCharacter('Barret Falster', gender='m')
+NonPlayerCharacter('Playton Williams', gender='m')
+NonPlayerCharacter('Sherry Fandling', gender='f')
+TROID = NonPlayerCharacter('Troid', gender='m')
 
 Camper('Brent Drago', gender='m')
 Camper('Botany Lynn', gender='f')
