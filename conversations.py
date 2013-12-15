@@ -17,4 +17,4 @@ class Conversation(object):
   TROID_OUTSIDE_THEATER = ('''
 Troid:
     Uh, hey. Whats up
-""")
+''')
