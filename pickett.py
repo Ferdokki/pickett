@@ -15,7 +15,14 @@ LAST_NAME = None
 RUN_FLAG = True
 BULLY = None
 DAY = 1
+DEAD = False
 
+class GameState(object):
+  """Keeps track game state variables"""
+  def __init__(self, convo_flag=0, characters_talked_to=0):
+    self.convo_flag = convo_flag
+    self.characters_talked_to = characters_talked_to
+  
 def welcome_screen():
   global LAST_NAME
   global BULLY
