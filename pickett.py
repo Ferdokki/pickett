@@ -51,4 +51,4 @@ def week_one(day):
   person = characters.choose_person(
     people_outside_theater, messages.LEAVING_THEATER)
   
-    print 'You selected %s.' % person
+  print 'You selected %s.' % person
