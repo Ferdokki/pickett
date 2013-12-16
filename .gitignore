@@ -1,5 +1,10 @@
-*.py[cod]
 *.swp
+
+
+# Boilerplate from github.
+
+*.py[cod]
+
 # C extensions
 *.so
 

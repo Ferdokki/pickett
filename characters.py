@@ -33,8 +33,10 @@ class Character(object):
   def __str__(self):
     return self.DESCRIPTION_STRING.format(self)
 
+
 class NonPlayerCharacter(Character):
   cclass = 'NPC'
+
 
 class Camper(Character):
   cclass = 'Camper'
