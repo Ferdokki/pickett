@@ -50,5 +50,8 @@ def week_one(day):
   
   person = characters.choose_person(
     people_outside_theater, messages.LEAVING_THEATER)
-  
+
+  # Get rid of this print statement later but its helpful for now
   print 'You selected %s.' % person
+
+  GameState.characters_talked_to = 1
