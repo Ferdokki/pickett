@@ -14,16 +14,15 @@ class Conversation(object):
     the theater after orientation on Day One."""
 
     if self.npc = 'Troid':
+
       npc_speaking = '\n%s:\n\t'
-      m.print_messages(messages.TROID_DESCRIPTION + messages.ENTER)
 
-      m.print_messages(npc_speaking + messages
-
-      raw_input(npc_speaking + 'Oh man, it\'s hot, no ' 
-      'ladies here either, do you like soda?' + messages.ENTER) 
+      m.print_messages([
+        m.TROID_DESCRIPTION + m.ENTER,
+        m.TROID_HEY_BRO + m.ENTER,
+        m.TROID_CONVO_ONE + m.ENTER])
       
-      self.answer = raw_input('1: Yes, 2: No, 3:I\'ve never tried soda.'
-                      '\n\nSelect a valid choice :> ') 
+      self.answer = m.print_messages(m.TROID_CONVO_ONE_ANSWERS)
 
       if self.answer == '1':
         characters.TROID.dispo += 1

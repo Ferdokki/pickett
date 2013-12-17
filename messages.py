@@ -122,6 +122,7 @@ Please choose a number. :>
 
 BAD_NUMBER_MESSAGE = 'Your answer must be between 1 and %d'
 
+# Troid outside theater
 TROID_DESCRIPTION = '''
 You see the Counselor from the bus. He is wearing a backwards multi-colored
 hat, t-shirt with a soda, shorts, big sneakears, and a small cigarette 
@@ -131,3 +132,13 @@ hanging from his mouth.
 TROID_HEY_BRO = '''
 Hey Bro.
 '''
+
+TROID_CONVO_ONE = '''
+Oh man, its hot, no ladies here either, do you like soda?
+'''
+
+TROID_CONVO_ONE_ANSWERS = '''
+1: Yes, 2: No, 3: I\'ve never tried soda.'
+
+Select a valid choice please :> '''
+
