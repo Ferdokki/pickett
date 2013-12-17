@@ -142,3 +142,6 @@ TROID_CONVO_ONE_ANSWERS = '''
 
 Select a valid choice please :> '''
 
+TROID_LOVES_X = '''
+Yeah totally dude, I love feeling extreme. 
+'''

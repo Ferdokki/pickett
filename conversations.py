@@ -15,18 +15,15 @@ class Conversation(object):
 
     if self.npc = 'Troid':
 
-      npc_speaking = '\n%s:\n\t'
+      npc_speaking = '\n%s:\n\t' % characters.TROID.name
 
       m.print_messages([
         m.TROID_DESCRIPTION + m.ENTER,
-        m.TROID_HEY_BRO + m.ENTER,
-        m.TROID_CONVO_ONE + m.ENTER])
+        npc_speaking + m.TROID_HEY_BRO + m.ENTER,
+        npc_speaking + m.TROID_CONVO_ONE + m.ENTER])
       
       self.answer = m.print_messages(m.TROID_CONVO_ONE_ANSWERS)
 
       if self.answer == '1':
         characters.TROID.dispo += 1
-        raw_input('Yeah totally dude. '
-                  'I love feeling extreme')
-      
-                
+        m.print_messages(npc_speaking + m.TROID_LOVES_X + m.ENTER)        
