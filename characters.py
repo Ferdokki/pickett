@@ -12,8 +12,8 @@ class Character(object):
     'Character Class = {0.cclass}, '
     'Hit Points = {0.current_hit_points}/{0.hit_points}, '
     'Status: {0.status}, '
-    'Gender: {0.gender} '
-    'Disposition: {0.dispo} ')
+    'Gender: {0.gender}, '
+    'Disposition: {0.dispo}. ')
 
   CHARACTERS = set()
 

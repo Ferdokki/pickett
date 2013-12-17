@@ -121,3 +121,13 @@ Please choose a number. :>
 '''
 
 BAD_NUMBER_MESSAGE = 'Your answer must be between 1 and %d'
+
+TROID_DESCRIPTION = '''
+You see the Counselor from the bus. He is wearing a backwards multi-colored
+hat, t-shirt with a soda, shorts, big sneakears, and a small cigarette 
+hanging from his mouth.
+'''
+
+TROID_HEY_BRO = '''
+Hey Bro.
+'''

@@ -1,5 +1,5 @@
 import characters
-import messages
+import messages as m
 import random
 
 class Conversation(object):
@@ -15,14 +15,9 @@ class Conversation(object):
 
     if self.npc = 'Troid':
       npc_speaking = '\n%s:\n\t'
-      raw_input(
-        'You see the Counselor from the bus. '    
-        'He is wearing a backwards multi-colored hat, '
-        't-shirt with a soda, shorts, big sneakears, '
-        'and a small cigarette hanging from his mouth.'
-        + messages.ENTER)
+      m.print_messages(messages.TROID_DESCRIPTION + messages.ENTER)
 
-      raw_input(npc_speaking + 'Hey Bro.' + messages.ENTER) % self.npc
+      m.print_messages(npc_speaking + messages
 
       raw_input(npc_speaking + 'Oh man, it\'s hot, no ' 
       'ladies here either, do you like soda?' + messages.ENTER) 
