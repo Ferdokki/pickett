@@ -9,10 +9,6 @@ def print_messages(messages):
   for m in messages:
     raw_input(m + ENTER)
 
-NOT_VALID_ANSWER = ''' 
-You entered %s, please select a valid answer.
-''' % conversations.Conversation.answer
-
 WELCOME = '''
 *******************************************************************************
 ><><><><><><><><><><><><><><><>PICKETT<><><><><><><><><><><><><><><><><><><><><

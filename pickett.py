@@ -7,7 +7,6 @@ import feelings
 import messages
 import monsters
 import roll
-import skills
 
 # GLOBALS
 PSI_FLAG = False
@@ -19,9 +18,10 @@ DEAD = False
 
 class GameState(object):
   """Keeps track game state variables"""
-  def __init__(self, convo_flag=0, characters_talked_to=0):
+  def __init__(self, convo_flag=0, characters_talked_to=0, convo_log=(None)):
     self.convo_flag = convo_flag
     self.characters_talked_to = characters_talked_to
+    self.convo_log = convo_log
   
 def welcome_screen():
   global LAST_NAME
@@ -44,14 +44,25 @@ def welcome_screen():
   return week_one(DAY)
 
 def week_one(day):
-  messages.print_messages(messages.WEEK_ONE[day])
-  campers = characters.random_character_sample(cclass='Camper', count=5)
-  people_outside_theater = campers + [characters.TROID]
+  if day == 1:
+    messages.print_messages(messages.WEEK_ONE[day])
+    campers = characters.random_character_sample(cclass='Camper', count=5)
+    people_outside_theater = campers + [characters.TROID]
+
+    while GameState.characters_talked_to != 3:
   
-  person = characters.choose_person(
-    people_outside_theater, messages.LEAVING_THEATER)
+      person = characters.choose_person(
+        people_outside_theater, messages.LEAVING_THEATER)
 
-  # Get rid of this print statement later but its helpful for now
-  print 'You selected %s.' % person
+      # Get rid of this print statement later but its helpful for now
+      print 'You selected %s.' % person
 
-  GameState.characters_talked_to = 1
+      GameState.characters_talked_to += 1
+
+      if person == 'Troid':
+        messages.print_messages([
+          messages.TROID_DESCRIPTION,
+          messages.TROID_HEY_BRO,
+          messages.TROID_CONVO_ONE])
+
+        answer = raw_input(messages.TROID_CONVO_ONE_ANSWERS)
