@@ -51,17 +51,16 @@ def week_one(day):
 
     outside_theater_day_one = GameState()
 
-    while outside_theater_day_one.characters_talked_to != 3:
-  
+    if outside_theater_day_one.characters_talked_to != 3:
+            
       person = characters.choose_person(
         people_outside_theater, messages.LEAVING_THEATER)
 
       # Get rid of this print statement later but its helpful for now
       print 'You selected %s.' % person
 
-      outside_theater_day_one.characters_talked_to += 1
-
       if person == 'Troid':
+        outside_theater_day_one.characters_talked_to = +1
         messages.print_messages([
           messages.TROID_DESCRIPTION,
           messages.TROID_HEY_BRO,
