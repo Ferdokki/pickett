@@ -1,5 +1,3 @@
-import conversations
-
 ENTER = """
 
 <Press Enter to continue>"""
