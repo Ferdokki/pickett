@@ -49,7 +49,9 @@ def week_one(day):
     campers = characters.random_character_sample(cclass='Camper', count=5)
     people_outside_theater = campers + [characters.TROID]
 
-    while GameState.characters_talked_to != 3:
+    outside_theater_day_one = GameState()
+
+    while outside_theater_day_one.characters_talked_to != 3:
   
       person = characters.choose_person(
         people_outside_theater, messages.LEAVING_THEATER)
@@ -57,7 +59,7 @@ def week_one(day):
       # Get rid of this print statement later but its helpful for now
       print 'You selected %s.' % person
 
-      GameState.characters_talked_to += 1
+      outside_theater_day_one.characters_talked_to += 1
 
       if person == 'Troid':
         messages.print_messages([
