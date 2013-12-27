@@ -9,20 +9,14 @@ import monsters
 import roll
 
 # GLOBALS
-PSI_FLAG = False
-LAST_NAME = None
-RUN_FLAG = True
-BULLY = None
-DAY = 1
-DEAD = False
+PSI_FLAG = False  # What's this?
+LAST_NAME = None  # Goes into GameState.
+RUN_FLAG = True  # What's this?
+BULLY = None  # This should be a local variable.
+DAY = 1  # Goes into GameState.
+DEAD = False  # Goes into GameState.
 
-class GameState(object):
-  """Keeps track game state variables"""
-  def __init__(self, convo_flag=0, characters_talked_to=0, convo_log=(None)):
-    self.convo_flag = convo_flag
-    self.characters_talked_to = characters_talked_to
-    self.convo_log = convo_log
-  
+
 def welcome_screen():
   global LAST_NAME
   global BULLY
@@ -52,11 +46,11 @@ def week_one(day):
     outside_theater_day_one = GameState()
 
     while outside_theater_day_one.characters_talked_to != 3:
-            
+
       person = characters.choose_person(
         people_outside_theater, messages.LEAVING_THEATER)
 
-      character_talking = person.name 
+      character_talking = person.name
 
       if person == characters.TROID:
         outside_theater_day_one.characters_talked_to = +1
@@ -82,4 +76,4 @@ def week_one(day):
           messages.print_messages(
             messages.PERSON_TALKING % character_talking + messages.TROID_WOW)
         else:
-          answer = raw_input(messages.TROID_CONVO_ONE_ANSWERS) 
+          answer = raw_input(messages.TROID_CONVO_ONE_ANSWERS)

@@ -34,9 +34,11 @@ class Character(object):
     return self.DESCRIPTION_STRING.format(self)
 
 
+class Player(character):
+  cclass = 'Player'
+
 class NonPlayerCharacter(Character):
   cclass = 'NPC'
-
 
 class Camper(Character):
   cclass = 'Camper'
