@@ -51,7 +51,7 @@ def week_one(day):
 
     outside_theater_day_one = GameState()
 
-    if outside_theater_day_one.characters_talked_to != 3:
+    while outside_theater_day_one.characters_talked_to != 3:
             
       person = characters.choose_person(
         people_outside_theater, messages.LEAVING_THEATER)
@@ -66,3 +66,20 @@ def week_one(day):
           messages.PERSON_TALKING % character_talking + messages.TROID_CONVO_ONE])
 
         answer = raw_input(messages.TROID_CONVO_ONE_ANSWERS)
+
+        if answer == '1':
+          characters.TROID.dispo += 1
+          messages.print_messages(
+            messages.PERSON_TALKING % character_talking + messages.TROID_LOVES_X)
+
+        elif answer == '2':
+          characters.TROID.dispo -= 1
+          messages.print_messages(
+            messages.PERSON_TALKING % character_talking + messages.TROID_WHATEVER_SMELL)
+
+        elif answer == '3':
+          characters.TROID.dispo -= 1
+          messages.print_messages(
+            messages.PERSON_TALKING % character_talking + messages.TROID_WOW)
+        else:
+          answer = raw_input(messages.TROID_CONVO_ONE_ANSWERS) 
