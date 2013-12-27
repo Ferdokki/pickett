@@ -7,6 +7,8 @@ def print_messages(messages):
   for m in messages:
     raw_input(m + ENTER)
 
+PERSON_TALKING = '\n\t%s:'
+
 WELCOME = '''
 *******************************************************************************
 ><><><><><><><><><><><><><><><>PICKETT<><><><><><><><><><><><><><><><><><><><><

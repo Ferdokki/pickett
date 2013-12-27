@@ -56,11 +56,13 @@ def week_one(day):
       person = characters.choose_person(
         people_outside_theater, messages.LEAVING_THEATER)
 
+      character_talking = person.name 
+
       if person == characters.TROID:
         outside_theater_day_one.characters_talked_to = +1
         messages.print_messages([
           messages.TROID_DESCRIPTION,
-          messages.TROID_HEY_BRO,
-          messages.TROID_CONVO_ONE])
+          messages.PERSON_TALKING % character_talking + messages.TROID_HEY_BRO,
+          messages.PERSON_TALKING % character_talking + messages.TROID_CONVO_ONE])
 
         answer = raw_input(messages.TROID_CONVO_ONE_ANSWERS)
