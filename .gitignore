@@ -1,6 +1,7 @@
 *.swp
 *.pwc
 *.py
+*.py~
 
 # Boilerplate from github.
 

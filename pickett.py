@@ -56,7 +56,7 @@ def week_one(day):
       person = characters.choose_person(
         people_outside_theater, messages.LEAVING_THEATER)
 
-      if person == 'Troid':
+      if person == characters.TROID:
         outside_theater_day_one.characters_talked_to = +1
         messages.print_messages([
           messages.TROID_DESCRIPTION,
