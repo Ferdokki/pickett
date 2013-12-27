@@ -34,7 +34,7 @@ class Character(object):
     return self.DESCRIPTION_STRING.format(self)
 
 
-class Player(character):
+class Player(Character):
   cclass = 'Player'
 
 class NonPlayerCharacter(Character):

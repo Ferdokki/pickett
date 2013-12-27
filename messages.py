@@ -19,7 +19,7 @@ WELCOME = '''
 *******************************************************************************
               '''
 
-LAST_NAME = '\nWhat is your last name boy? :> '
+ASK_LAST_NAME = '\nWhat is your last name boy? :> '
 
 EXPLANATION = '''
 You are a young boy of the age of 10.
@@ -126,7 +126,7 @@ BAD_NUMBER_MESSAGE = 'Your answer must be between 1 and %d'
 # Troid outside theater
 TROID_DESCRIPTION = '''
 You see the Counselor from the bus. He is wearing a backwards multi-colored
-hat, t-shirt with a soda, shorts, big sneakears, and a small cigarette 
+hat, t-shirt with a soda, shorts, big sneakears, and a small cigarette
 hanging from his mouth.
 '''
 
@@ -144,7 +144,7 @@ TROID_CONVO_ONE_ANSWERS = '''
 Select a valid choice please :> '''
 
 TROID_LOVES_X = '''
-Yeah totally dude, I love feeling extreme. 
+Yeah totally dude, I love feeling extreme.
 '''
 
 TROID_WHATEVER_SMELL = '''

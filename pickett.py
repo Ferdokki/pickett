@@ -8,26 +8,24 @@ import messages
 import monsters
 import roll
 
-# GLOBALS
-PSI_FLAG = False  # What's this?
-LAST_NAME = None  # Goes into GameState.
-RUN_FLAG = True  # What's this?
-BULLY = None  # This should be a local variable.
-DAY = 1  # Goes into GameState.
-DEAD = False  # Goes into GameState.
+from GameState import GAME_STATE
 
+# PSI_FLAG = False  # What's this?
+# RUN_FLAG = True  # What's this?
+# These aren't yet used and should either go into GameState or become local
+# variables.
 
 def welcome_screen():
   global LAST_NAME
-  global BULLY
+
   global DAY
 
   raw_input(messages.WELCOME)
 
-  LAST_NAME = raw_input(messages.LAST_NAME)
-  BULLY = characters.random_character(cclass='Camper', gender='m')
+  GAME_STATE.name = raw_input(messages.ASK_LAST_NAME)
+  bully = characters.random_character(cclass='Camper', gender='m')
 
-  print 'Your name is Pickett %s' % LAST_NAME
+  print 'Your name is Pickett %s' % GAME_STATE.name
 
   messages.print_messages([
     messages.EXPLANATION,
@@ -35,17 +33,15 @@ def welcome_screen():
     messages.CRACK,
     messages.GAME_KID_LOST])
 
-  return week_one(DAY)
+  return week_one(bully)
 
-def week_one(day):
-  if day == 1:
-    messages.print_messages(messages.WEEK_ONE[day])
+def week_one(bully):
+  if GAME_STATE.day == 1:
+    messages.print_messages(messages.WEEK_ONE[GAME_STATE.day])
     campers = characters.random_character_sample(cclass='Camper', count=5)
     people_outside_theater = campers + [characters.TROID]
 
-    outside_theater_day_one = GameState()
-
-    while outside_theater_day_one.characters_talked_to != 3:
+    while GAME_STATE.characters_talked_to != 3:
 
       person = characters.choose_person(
         people_outside_theater, messages.LEAVING_THEATER)
@@ -53,7 +49,7 @@ def week_one(day):
       character_talking = person.name
 
       if person == characters.TROID:
-        outside_theater_day_one.characters_talked_to = +1
+        GAME_STATE.characters_talked_to = +1
         messages.print_messages([
           messages.TROID_DESCRIPTION,
           messages.PERSON_TALKING % character_talking + messages.TROID_HEY_BRO,
