@@ -59,17 +59,17 @@ def week_one(bully):
 
         if answer == '1':
           characters.TROID.dispo += 1
-          messages.print_messages(
-            messages.PERSON_TALKING % character_talking + messages.TROID_LOVES_X)
+          messages.print_messages([
+            messages.PERSON_TALKING % character_talking + messages.TROID_LOVES_X])
 
         elif answer == '2':
           characters.TROID.dispo -= 1
-          messages.print_messages(
-            messages.PERSON_TALKING % character_talking + messages.TROID_WHATEVER_SMELL)
+          messages.print_messages([
+            messages.PERSON_TALKING % character_talking + messages.TROID_WHATEVER_SMELL])
 
         elif answer == '3':
           characters.TROID.dispo -= 1
-          messages.print_messages(
-            messages.PERSON_TALKING % character_talking + messages.TROID_WOW)
+          messages.print_messages([
+            messages.PERSON_TALKING % character_talking + messages.TROID_WOW])
         else:
           answer = raw_input(messages.TROID_CONVO_ONE_ANSWERS)
