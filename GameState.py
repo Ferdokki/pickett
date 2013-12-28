@@ -7,5 +7,6 @@ class GameState(object):
     self.name = name
     self.dead = False
     self.day = 1
+    self.player = None
 
 GAME_STATE = GameState()

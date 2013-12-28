@@ -17,15 +17,15 @@ from GameState import GAME_STATE
 
 def welcome_screen():
   global LAST_NAME
-
   global DAY
 
   raw_input(messages.WELCOME)
 
-  GAME_STATE.name = raw_input(messages.ASK_LAST_NAME)
+  name = raw_input(messages.ASK_LAST_NAME)
+  GAME_STATE.player = characters.Player(name=name)
   bully = characters.random_character(cclass='Camper', gender='m')
 
-  print 'Your name is Pickett %s' % GAME_STATE.name
+  print 'Your name is Pickett %s' % GAME_STATE.player.name
 
   messages.print_messages([
     messages.EXPLANATION,

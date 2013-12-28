@@ -1,6 +1,7 @@
 import random
 
 import messages
+import Pronoun
 
 class Character(object):
   """Abstract base class for all characters in the game.
@@ -26,13 +27,13 @@ class Character(object):
     self.attack_skill = attack_skill
     self.dead = dead
     self.status = status
-    self.gender = gender
+    self.gender = gender or 'm'
+    self.pronoun = Pronoun.PRONOUN[self.gender]
 
     Character.CHARACTERS.add(self)
 
   def __str__(self):
     return self.DESCRIPTION_STRING.format(self)
-
 
 class Player(Character):
   cclass = 'Player'
