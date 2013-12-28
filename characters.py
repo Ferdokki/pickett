@@ -54,7 +54,7 @@ NonPlayerCharacter('Barry Fandling', gender='m')
 NonPlayerCharacter('Barret Falster', gender='m')
 NonPlayerCharacter('Playton Williams', gender='m')
 NonPlayerCharacter('Sherry Fandling', gender='f')
-TROID = NonPlayerCharacter('Troid', gender='m')
+NonPlayerCharacter('Troid', gender='m')
 
 Camper('Brent Drago', gender='m')
 Camper('Botany Lynn', gender='f')
@@ -76,6 +76,18 @@ Camper('Trinoba Vyder', gender='')
 Camper('Volga Toober', gender='f')
 Camper('Yeldstat Krong', gender='f')
 
+
+def find(name):
+  if isinstance(name, Character):
+    return name
+  lname = name.lower()
+  chars = [c for c in Character.CHARACTERS if c.name.lower().startswith(lname)]
+  if not chars:
+    raise Exception('Can\'t understand character name %s' % name)
+  if len(chars) > 1:
+    raise Exception('Character name %s is ambiguous: might be %s' %
+                    (name, ', '.join(c.name for c in chars)))
+  return chars[0]
 
 def get_characters(cclass=None, gender=None):
   results = []

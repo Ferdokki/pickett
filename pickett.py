@@ -39,7 +39,8 @@ def week_one(bully):
   if GAME_STATE.day == 1:
     messages.print_messages(messages.WEEK_ONE[GAME_STATE.day])
     campers = characters.random_character_sample(cclass='Camper', count=5)
-    people_outside_theater = campers + [characters.TROID]
+    troid = characters.find('Troid')
+    people_outside_theater = campers + [troid]
 
     while GAME_STATE.characters_talked_to != 3:
 
@@ -48,7 +49,7 @@ def week_one(bully):
 
       character_talking = person.name
 
-      if person == characters.TROID:
+      if person == troid:
         GAME_STATE.characters_talked_to = +1
         messages.print_messages([
           messages.TROID_DESCRIPTION,
@@ -58,17 +59,17 @@ def week_one(bully):
         answer = raw_input(messages.TROID_CONVO_ONE_ANSWERS)
 
         if answer == '1':
-          characters.TROID.dispo += 1
+          troid.dispo += 1
           messages.print_messages([
             messages.PERSON_TALKING % character_talking + messages.TROID_LOVES_X])
 
         elif answer == '2':
-          characters.TROID.dispo -= 1
+          troid.dispo -= 1
           messages.print_messages([
             messages.PERSON_TALKING % character_talking + messages.TROID_WHATEVER_SMELL])
 
         elif answer == '3':
-          characters.TROID.dispo -= 1
+          troid.dispo -= 1
           messages.print_messages([
             messages.PERSON_TALKING % character_talking + messages.TROID_WOW])
         else:
