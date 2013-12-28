@@ -1,6 +1,6 @@
 *.swp
 *.pwc
-*.py
+*.pyc
 *.py~
 *~
 
