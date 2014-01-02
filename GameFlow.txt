@@ -1,0 +1,26 @@
+Pickett game events and flow. 
+
+Pickett will play very much like another RenPy game that has gotten some
+critical acclaim from steam and PC gamer, Long live the queen.
+Essentially, The game lasts only 3-4 weeks (I have yet to decide through
+playtesting if it should go on for any longer. So, lets begin. 
+
+<Day One, Week One>
+
+.INTRO [Bully is chosen here.]
+
+  -Orientation Happens
+
+  DAY_ONE_WEEK_ONE_OUTSIDE_THEATER [Work in progress]
+
+  DAY_ONE_WEEK_ONE_INSIDE_BUNK_NIGHT [Not Completed]
+
+<Day Two, Week One>
+  
+  -Player chooses two activities for the day.
+
+  -Player engages in activity one. 
+
+  DAY_TWO_WEEK_ONE_LUNCH [Not Completed.]
+  
+
