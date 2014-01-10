@@ -1,7 +1,7 @@
 Pickett game events and flow. 
 
 Pickett will play very much like another RenPy game that has gotten some
-critical acclaim from steam and PC gamer, Long live the queen.
+critical acclaim from steam and PC gamer, 'Long Live The Queen.'
 Essentially, The game lasts only 3-4 weeks (I have yet to decide through
 playtesting if it should go on for any longer. So, lets begin. 
 
@@ -17,10 +17,14 @@ playtesting if it should go on for any longer. So, lets begin.
 
 <Day Two, Week One>
   
+  DAY_TWO_WEEK_ONE_FLAGPOLE [Not Completed.]
+
   -Player chooses two activities for the day.
 
   -Player engages in activity one. 
 
   DAY_TWO_WEEK_ONE_LUNCH [Not Completed.]
   
+  -Player engages in activity two.
+
 
