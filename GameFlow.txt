@@ -7,7 +7,7 @@ playtesting if it should go on for any longer. So, lets begin.
 
 <Day One, Week One>
 
-.INTRO [Bully is chosen here.]
+   INTRO {Bully is chosen here.}
 
   -Orientation Happens
 
@@ -23,4 +23,12 @@ playtesting if it should go on for any longer. So, lets begin.
 
   DAY_TWO_WEEK_ONE_LUNCH [Not Completed.]
   
+  -Player engages in activity two.
+
+  -Free Choice (Player chooses an activity from here that affects mood)
+
+  DAY_TWO_WEEK_ONE_POOL_PARTY [Not Completed.] {evenining activity}
+
+<Day Three, Week One>
+
 
