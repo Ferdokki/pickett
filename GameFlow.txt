@@ -19,7 +19,7 @@ playtesting if it should go on for any longer. So, lets begin.
   
   -Player chooses two activities for the day.
 
-  -Player engages in activity one. 
+  -Player engages in activity one. {boosts associated skill}
 
   DAY_TWO_WEEK_ONE_LUNCH [Not Completed.]
   
@@ -30,5 +30,11 @@ playtesting if it should go on for any longer. So, lets begin.
   DAY_TWO_WEEK_ONE_POOL_PARTY [Not Completed.] {evenining activity}
 
 <Day Three, Week One>
+
+  -Player chooses two activities for the day. 
+
+  -Player engages in activity one. {boosts associated skill}
+
+  DAY_THREE_WEEK_ONE_LUNCH [Not Completed]
 
 
