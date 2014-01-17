@@ -1,0 +1,283 @@
+# Pickett Quick Summary & Notes #
+
+Pickett Summary: Pickett is a Role Playing Game in which you take on the 
+
+role of a young boy called Pickett (Last name comes from user input.) 
+
+Pickett is an 11 year old boy from a big city who is begrudgingly sent 
+
+to camp by his parents, who in turn go on vacation together for a month. 
+
+After a short stay at the camp, it becomes clear that the new owners are 
+
+using the camp to beckon something horrible and Pickett and his friends 
+
+are the only ones that can stop it. The new owners of the camp, Barry & 
+
+Sherry Fandling, are attempting to call what they think are ancient 
+
+Native American spirits to the camp to possess the campers and send out 
+
+into the world. Pickett is kind of nondescript and meant to act as a 
+
+stand-in for the person playing the game. The game takes place through 
+
+several phases, and a game could be potentially completed in a few hours, 
+
+though it's unforgivingly difficult. The three phases are Encroachment, 
+
+Subversion, & Insemination. 
+
+*SCENES*
+
+Encroachment: This is the opening phase of the game, when Pickett and the 
+
+other campers arrive at the camp. This phase plays almost like Harvest 
+
+Moon. The game holds your hand through several camp and bunk activities 
+
+as you talk to your friends, meet other NPCs, and fight some relatively 
+
+harmless monsters. Depending on how successful the character is in these 
+
+endeavors, the Fandlings manage to summon several aliens to the camp. If 
+
+the players do poorly, the players miss out on some items, and it will be 
+
+harder to make some relationships with other campers. If the player does 
+
+well, it's the opposite. 
+
+Subversion: This is a week into the game. The Encroachment phase is 
+
+over, and now other campers start to disappear and show up dead, or get 
+
+recruited by the Fandlings. Depending on the relationships you make in 
+
+the first week, and how deep these are, you can have up to four campers 
+
+that end up following Pickett. Stuff gets really weird here, but the camp 
+
+still tries to keep up appearances. Both, or one of the counselors will 
+
+get fired (or killed) depending on how Pickett goes about the quests 
+
+in this phase. If one is left alive, they will neutralize one of the 
+
+camper bosses in the next phase. Campers will either be dead, recruited 
+
+to Pickett's party, or the Fandlings' party by the end of this phase. If 
+
+they have been recruited by the Fandlings, campers then are forced to 
+
+ingest an alien body that then takes over its host. 
+
+Insemination: This is the last phase of the game. The aliens have 
+
+completely taken over the host campers, and the Fandling's have stationed 
+
+them at different locations of the camp, each of them with minions of
+
+their own. They have been ordered by the Fandlings to go out and wreak 
+
+havoc in the world, ushering in a new world order. The player must go 
+
+to each stronghold and destroy all of the minions, and the Fandlings, 
+
+with whatever resources and characters they have left in their party. At 
+
+this point most of the camp is on fire and it looks like something out of 
+
+Mad Max. Ironically the Fandlings are calling this point in time "Color 
+
+War" where they declare anyone not dressed in blue and white a threat. If 
+
+Pickett survives, you win! Your last name will be recorded in the high 
+
+scores with honor. If you lose, tough shit. 
+
+Mini Scenes: These are the maximum allowed encounters for every day, 
+
+which will include 2 random scheduled activities, 2 meals, and 1 social 
+
+event (some special days will have 2 social events.)For the most part, 5 
+
+mini scenes a day. In these scenes, randomly, NPC’s will be chosen from 
+
+the pool, including campers, who can be persuaded to join your party in 
+
+various scene, & set NPCs. 5 Mini Scenes makes a day and 35 mini scenes 
+
+makes up a SCENE. 
+
+Disposition: depending on how you answer certain questions, or respond 
+
+to certain needs a camper or set NPC might have, the disposition of this 
+
+character toward pickett rises, like in harvest moon. After a response 
+
+has been given, that’s it, there are no other chances to get it right 
+
+until another playthrough, and its not always obvious if a character 
+
+likes you or not. 
+
+* Locations *
+
+KEY: 
+
+- = 1st scene
+
+-- = 2nd scene
+
+--- = 3rd scene
+
+-> Quad
+
+- Cafeteria
+
+- Office
+
+- Arts & Crafts
+
+- Canteen
+
+[Leads to main road one & Bridge.]
+
+ 
+
+-> Bridge
+
+[Leads to Basketball/WaterSports, & Quad]
+
+-> Basketball/WaterSports
+
+-- Cow Shoppe
+
+--- Animal Pits
+
+[Leads to Soccer/Hockey fields & the Bridge] 
+
+-> Soccer/Hockey 
+
+-- Black Hole
+
+-- Tent small encampment
+
+--- Tent City
+
+[Leads to Snipe Forest and Basketball/WaterSports]
+
+-> Snipe Forest
+
+-- Snipe encampment
+
+--- Snipe infestation
+
+--- Secret Vault
+
+[Leads to Fishing Hole & Lake (via canoe)] 
+
+-> Main Road 1
+
+- Boys Bunk
+
+- Boys Loudspeaker Cabin
+
+- Fishing Hole & lake [Can take canoe to Snipe Forest]
+
+[Leads to Fork, main road 1, & Forest Walkway 1]
+
+-> Forest Walkway 1
+
+[Leads to Upper Plateau & Main Road 1.]
+
+-> Fork
+
+- Ceramics shop
+
+- Make Out Creek
+
+[leads to Main Road 1, Main Road 2, Firepit]
+
+-> Firepit
+
+- Infirmary (only there during first scene) 
+
+[Leads to Facilities, Upper Plateau, & Fork]
+
+-> Facilities
+
+- Gym
+
+- Indoor Courts
+
+-- Makeshift Clinic
+
+[Forest Walkway 2, & Firepit]
+
+-> Upper Plateau
+
+- Theatre (Inside Theatre is - Band Room) 
+
+- Tennis Court
+
+[Leads to Camp Grounds, Firepit, Forest Walkway 1.]
+
+-> Camp Grounds
+
+- Mountain Climbing
+
+- Outback Cabana
+
+-- Swamp
+
+-> Main Road 2
+
+- Girls Bunk
+
+- Girls Loudspeaker Bunk
+
+[Leads to Pool, Fork.]
+
+-> Pool
+
+- Pool
+
+- Gymnastics
+
+- Pool Shed (Locked until Scene 2) 
+
+[Leads to Forest Walkway 2, Main Road 2]
+
+-> Forest Walkway 2
+
+[Leads to Facilities & Pool]
+
+# Feature Ideas #
+
+Permadeath & Crossover: If Pickett dies, it's game over. If any other 
+
+camper dies, they are dead and lost for the duration of the game. As 
+
+the game progresses, the kids that Pickett does not befriend (and 
+
+it's impossible to be friends with everyone) will either randomly get 
+
+killed or be recruited by the Fandlings to carry out their plan in the 
+
+Insemination phase. Oh yeah, if Pickett dies, I think the game should 
+
+Status Recovery Items: 
+
+Antidote: Cures Poison
+
+Coffee: Cures Tired
+
+Air horn: Cures Sleep & Confusion
+
+Trinkets: Cures Charm
+
+Antibiotics: Cures Headcold. 
+
+Only way to cure Fear or Despondence is by defeating an enemy.
