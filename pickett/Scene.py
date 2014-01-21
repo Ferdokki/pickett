@@ -1,4 +1,4 @@
-import characters
+import Characters
 import messages
 
 from GameState import GAME_STATE

@@ -1,7 +1,7 @@
 #Pickett by Ray Weiss
 
 import attributes
-import characters
+import Characters
 import inventory
 import feelings
 import messages
@@ -21,8 +21,8 @@ def welcome_screen():
   raw_input(messages.WELCOME)
 
   name = raw_input(messages.ASK_LAST_NAME)
-  GAME_STATE.player = characters.Player(name=name)
-  bully = characters.random_character(cclass='Camper', gender='m')
+  GAME_STATE.player = Characters.Player(name=name)
+  bully = Characters.random_character(cclass='Camper', gender='m')
 
   print 'Your name is Pickett %s' % GAME_STATE.player.name
 
@@ -37,13 +37,12 @@ def welcome_screen():
 def week_one(bully):
   if GAME_STATE.day == 1:
     messages.print_messages(messages.WEEK_ONE[GAME_STATE.day])
-    campers = characters.random_character_sample(cclass='Camper', count=5)
-    troid = characters.find('Troid')
+    campers = Characters.random_character_sample(cclass='Camper', count=5)
+    troid = Characters.find('Troid')
     people_outside_theater = campers + [troid]
 
     while GAME_STATE.characters_talked_to != 3:
-
-      person = characters.choose_person(
+      person = Characters.choose_person(
         people_outside_theater, messages.LEAVING_THEATER)
 
       character_talking = person.name
@@ -71,5 +70,6 @@ def week_one(bully):
           troid.dispo -= 1
           messages.print_messages([
             messages.PERSON_TALKING % character_talking + messages.TROID_WOW])
+
         else:
           answer = raw_input(messages.TROID_CONVO_ONE_ANSWERS)
