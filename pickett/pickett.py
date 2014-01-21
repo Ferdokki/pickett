@@ -1,4 +1,4 @@
-#Pickett by Ray Weiss
+# Pickett by Ray Weiss
 
 import Characters
 import Messages
@@ -37,14 +37,14 @@ def week_one(bully):
     troid = Characters.find('Troid')
     people_outside_theater = campers + [troid]
 
-    while GAME_STATE.characters_talked_to != 3:
+    while GAME_STATE.characters_talked_to < 3:
+      GAME_STATE.characters_talked_to += 1
       person = Characters.choose_person(
         people_outside_theater, Messages.LEAVING_THEATER)
 
       character_talking = person.name
 
       if person == troid:
-        GAME_STATE.characters_talked_to = +1
         Messages.print_messages([
           Messages.TROID_DESCRIPTION,
           Messages.PERSON_TALKING % character_talking + Messages.TROID_HEY_BRO,
