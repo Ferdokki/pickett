@@ -6,7 +6,6 @@ import inventory
 import feelings
 import messages
 import monsters
-import roll
 
 from GameState import GAME_STATE
 
