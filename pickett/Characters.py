@@ -2,24 +2,28 @@ import random
 
 import Messages
 import Pronoun
+from Properties import Properties
 
 class Character(object):
   """Abstract base class for all characters in the game.
   Other interesting information here.
   """
   DESCRIPTION_STRING = (
-    '{0.name}: '
+    'Name = {0.name}, '
     'Attack Skill = {0.attack_skill}/100, '
     'Character Class = {0.cclass}, '
     'Hit Points = {0.current_hit_points}/{0.hit_points}, '
     'Status: {0.status}, '
     'Gender: {0.gender}, '
-    'Disposition: {0.dispo} ')
+    'Disposition: {0.dispo} '
+    'Properties: {0.properties}'
+    )
 
   CHARACTERS = set()
 
   def __init__(self, name, hit_points=0, current_hit_points=0, dispo=0,
-               attack_skill=20, dead=False, status=None, gender=None):
+               attack_skill=20, dead=False, status=None, gender=None,
+               **properties):
     self.name = name
     self.hit_points = hit_points
     self.current_hit_points = current_hit_points
@@ -29,11 +33,15 @@ class Character(object):
     self.status = status
     self.gender = gender or 'm'
     self.pronoun = Pronoun.PRONOUN[self.gender]
+    self.properties = Properties(properties)
 
     Character.CHARACTERS.add(self)
 
   def __str__(self):
     return self.DESCRIPTION_STRING.format(self)
+
+  def __repr__(self):
+    return '%s(%s)' % (self.__class__.__name__, str(self))
 
 class Player(Character):
   cclass = 'Player'
