@@ -3,7 +3,6 @@
 import attributes
 import Characters
 import inventory
-import feelings
 import messages
 import monsters
 
