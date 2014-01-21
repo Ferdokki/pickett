@@ -1,10 +1,7 @@
 #Pickett by Ray Weiss
 
-import attributes
 import Characters
-import inventory
 import Messages
-import monsters
 
 from GameState import GAME_STATE
 
