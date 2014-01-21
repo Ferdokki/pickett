@@ -1,6 +1,6 @@
 import random
 
-import messages
+import Messages
 import Pronoun
 
 class Character(object):
@@ -111,10 +111,10 @@ def choice_list(people):
 
 def choose_person(people, message):
   """Choose a specific person from a list of people."""
-  message = message + choice_list(people) + messages.REQUEST_A_NUMBER
+  message = message + choice_list(people) + Messages.REQUEST_A_NUMBER
   while True:
     choice = raw_input(message)
     try:
       return people[int(choice) - 1]
     except:
-      print messages.BAD_NUMBER_MESSAGE % len(people)
+      print Messages.BAD_NUMBER_MESSAGE % len(people)
