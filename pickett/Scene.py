@@ -1,5 +1,5 @@
 import Characters
-import messages
+import Messages
 
 from GameState import GAME_STATE
 
@@ -32,6 +32,6 @@ def run_scene(scene, *chars, **kwds):
   if has_prompt:
     prompt = parts.pop()
   for p in parts:
-    raw_input(p + messages.ENTER)
+    raw_input(p + Messages.ENTER)
   if has_prompt:
     return raw_input(prompt)
