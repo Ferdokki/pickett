@@ -61,9 +61,9 @@ Player('Pickett', gender='m', hit_points=10, current_hit_points=10,
        arts_and_crafts=0, animal_handling=0, archery=0, baseball=0,  #start of skills
        card_games=0, cpr=0, dodgeball=0, empathy=0, first_aid=0,
        fishing=0, foraging=0, firebuilding=0, intuition=0, knots=0,
-       lacrosse=0, lying=0, music=0, navigation=0, originality=0
+       lacrosse=0, lying=0, music=0, navigation=0, originality=0,
        pk_rockin=0, presentation=0, rock_climbing=0, sailing=0,
-       stand_up_comedy=0, swimming=0, swag=0, taste=0, theater=0
+       stand_up_comedy=0, swimming=0, swag=0, taste=0, theater=0,
        telekenisis=0, telepathy=0)
 
 NonPlayerCharacter('Angles Gator', gender='m')
