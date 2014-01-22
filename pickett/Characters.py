@@ -57,7 +57,7 @@ class Camper(Character):
 
 Player('Pickett', gender='m', hit_points=10, current_hit_points=10, 
        dull=3, innovative=3, homesick=5, arrogant=1, hopeless=3,
-       passionate=1, angry=2, paranoid=5, apathetic=4, hyperactive=2 #end of stats and moods
+       passionate=1, angry=2, paranoid=5, apathetic=4, hyperactive=2, #end of stats and moods
        arts_and_crafts=0, animal_handling=0, archery=0, baseball=0,  #start of skills
        card_games=0, cpr=0, dodgeball=0, empathy=0, first_aid=0,
        fishing=0, foraging=0, firebuilding=0, intuition=0, knots=0,
