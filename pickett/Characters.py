@@ -1,5 +1,6 @@
 import random
 
+import GameState
 import Messages
 import Pronoun
 from Properties import Properties
@@ -55,6 +56,7 @@ class Camper(AbstractCharacter):
     super(Camper, self).__init__(name, **kwds)
     self.camper_in_party = camper_in_party
 
+Player('Pickett %s', gender='m')
 
 NonPlayerCharacter('Angles Gator', gender='m')
 NonPlayerCharacter('Barry Fandling', gender='m')
