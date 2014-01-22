@@ -154,6 +154,6 @@ Whatever bro. Smell you later.
 TROID_WOW = '''
 Wow bro. Don\'t talk to me. Frag off noob.
 '''
-TROID_YO_BRO = '''
+TROID_DONE_TALKING = '''
 Yo bro. Stop talking bro. I got nothing more to say here.
 '''
