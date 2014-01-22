@@ -4,6 +4,7 @@ class GameState(object):
                convo_log=None, name=None):
     self.convo_flag = convo_flag
     self.characters_talked_to = characters_talked_to
+    salf.already_talked_to = already_talked_to
     self.convo_log = convo_log
     self.name = name
     self.dead = False

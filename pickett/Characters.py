@@ -1,6 +1,4 @@
 import random
-
-import GameState
 import Messages
 import Pronoun
 from Properties import Properties
