@@ -69,3 +69,4 @@ def week_one(bully):
 
         else:
           answer = raw_input(Messages.TROID_CONVO_ONE_ANSWERS)
+        

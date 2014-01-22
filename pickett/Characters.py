@@ -57,7 +57,16 @@ class Camper(Character):
     super(Camper, self).__init__(name, **kwds)
     self.camper_in_party = camper_in_party
 
-Player('Pickett %s', gender='m')
+Player('Pickett', gender='m', hit_points=10, current_hit_points=10, 
+       dull=3, innovative=3, homesick=5, arrogant=1, hopeless=3,
+       passionate=1, angry=2, paranoid=5, apathetic=4, hyperactive=2 #end of stats and moods
+       arts_and_crafts=0, animal_handling=0, archery=0, baseball=0,  #start of skills
+       card_games=0, cpr=0, dodgeball=0, empathy=0, first_aid=0,
+       fishing=0, foraging=0, firebuilding=0, intuition=0, knots=0,
+       lacrosse=0, lying=0, music=0, navigation=0, originality=0
+       pk_rockin=0, presentation=0, rock_climbing=0, sailing=0,
+       stand_up_comedy=0, swimming=0, swag=0, taste=0, theater=0
+       telekenisis=0, telepathy=0)
 
 NonPlayerCharacter('Angles Gator', gender='m')
 NonPlayerCharacter('Barry Fandling', gender='m')
