@@ -41,6 +41,8 @@ def week_one(bully):
       GAME_STATE.characters_talked_to += 1
       person = Characters.choose_person(
         people_outside_theater, Messages.LEAVING_THEATER)
+      
+      GameState.GAME_STATE.already_talked_to.append('Troid')
 
       character_talking = person.name
 
@@ -69,3 +71,4 @@ def week_one(bully):
 
         else:
           answer = raw_input(Messages.TROID_CONVO_ONE_ANSWERS)
+        
