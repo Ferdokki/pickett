@@ -3,5 +3,6 @@
 *.pyc
 *.py~
 *~
+*.swo
 
 .DS_Store
