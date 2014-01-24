@@ -1,0 +1,69 @@
+Combat engine for pickett ideas. 
+
+When a battle starts, The computer chooses an enemy (or one is already chosen) to fight against the
+player's party. 
+
+If there are players using any psychic abilities or special skills (not till a
+little later in the game.) They declare here weather they are using a skill or
+a spell. If the initave check (explained next) is failed and they are hit,
+their attack is cancelled. 
+
+Initiave check is made. This is a dodgeball skill check, roll 1 d100 and get
+equal to or under your dodgeball skill, if passed, then you go first. Some
+enemies will subtract some points from your init check as a negative modifer if they are more speedy
+than most enemies.
+
+After its determined who is going first, pickett's party or the monsters
+party, combat occurs. 
+
+If Pickett's team is first, Actions are choisen starting with pickett, and
+then npcs, like so. 
+
+Pickett: 
+
+HP: 10/10 STS: None
+
+Attack 
+Defend
+Skills/PSI
+Items
+Run Away
+
+ATTACK:
+  choose which monster to attack
+  Make an attack skill check depending on weapon type (d100)
+  if check fails, attack misses and next character goes.
+  if check is sucsessful, random weapon damage is deduced from npc hp
+  
+DEFEND: 
+  The defending character, if attacked sucsessfully, subtracts 1/5 of his
+total hp from incoming damage. this can be usefull for near death characters
+as death is permanent in pickett. 
+
+SKILLS/PSI:
+  If the player completes a few set story conditions pickett can use psi. A
+flag will be set, otherwise the option doesnt show up for pickett in combat.
+It is used the same way attack is used except with psi skills. Party
+characters get Skills that also work the same way. 
+
+ITEMS: 
+  Pickett has slots for 4 items in his backpack, a starting key item (key items
+do not count towards the backpack item limit.) Items can do a number of things
+detailed in pickettnotes.txt additional pary characters provide 4 additional
+inventory slots.
+
+RUN AWAY:
+  If one character chooses run, it asks if you are sure if you want to run away,
+and Pickett makes another dodgeball check with a modifer of -5% for each point 
+of damage he has sustained underneath 50% of his total HP.
+And then actions would be chosen for the other party members in the same way.
+
+
+Monsters typically attack weak characters, or healers. Groups of monsters will
+attack individually. A list of monsters with stats, attacks, and properties
+and behaivors should be made up asap for testing. 
+
+Other Campers and NPCs can be enemies or "monsters" too. This I assume would
+be easier to test as campers are implimented already. Their behaivor would be
+to dish out as much damage as possible to the most crucial characters to
+pickett's party, if not pickett himself.
