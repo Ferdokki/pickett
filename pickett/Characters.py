@@ -1,16 +1,17 @@
 import random
+
 import Messages
 import Pronoun
 from Properties import Properties
 
-class Character(object):
+class AbstractCharacter(object):
   """Abstract base class for all characters in the game.
   Other interesting information here.
   """
-  DESCRIPTION_STRING = (
+  _DESCRIPTION_STRING = (
     'Name = {0.name}, '
     'Attack Skill = {0.attack_skill}/100, '
-    'Character Class = {0.cclass}, '
+    'Character Class = {1}, '
     'Hit Points = {0.current_hit_points}/{0.hit_points}, '
     'Status: {0.status}, '
     'Gender: {0.gender}, '
@@ -18,14 +19,14 @@ class Character(object):
     'Properties: {0.properties}'
     )
 
-  CHARACTERS = set()
+  _CHARACTERS = set()
 
   def __init__(self, name, hit_points=0, current_hit_points=0, dispo=0,
                attack_skill=20, dead=False, status=None, gender=None,
                **properties):
     self.name = name
     self.hit_points = hit_points
-    self.current_hit_points = current_hit_points
+    self.current_hit_points = max(current_hit_points, hit_points)
     self.dispo = dispo
     self.attack_skill = attack_skill
     self.dead = dead
@@ -34,28 +35,27 @@ class Character(object):
     self.pronoun = Pronoun.PRONOUN[self.gender]
     self.properties = Properties(properties)
 
-    Character.CHARACTERS.add(self)
+    self._CHARACTERS.add(self)
 
   def __str__(self):
-    return self.DESCRIPTION_STRING.format(self)
+    return self._DESCRIPTION_STRING.format(self, self.__class__.__name__)
 
   def __repr__(self):
     return '%s(%s)' % (self.__class__.__name__, str(self))
 
-class Player(Character):
-  cclass = 'Player'
 
-class NonPlayerCharacter(Character):
-  cclass = 'NPC'
+class Player(AbstractCharacter):
+  pass
 
-class Camper(Character):
-  cclass = 'Camper'
+class NonPlayerCharacter(AbstractCharacter):
+  pass
 
+class Camper(AbstractCharacter):
   def __init__(self, name, camper_in_party=False, **kwds):
     super(Camper, self).__init__(name, **kwds)
     self.camper_in_party = camper_in_party
 
-Player('Pickett', gender='m', hit_points=10, current_hit_points=10, 
+Player('Pickett', gender='m', hit_points=10, current_hit_points=10,
        dull=3, innovative=3, homesick=5, arrogant=1, hopeless=3,
        passionate=1, angry=2, paranoid=5, apathetic=4, hyperactive=2, #end of stats and moods
        arts_and_crafts=0, animal_handling=0, archery=0, baseball=0,  #start of skills
