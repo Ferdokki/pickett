@@ -1,4 +1,4 @@
-import Characters
+import CharacterDatabase
 import Messages
 
 from GameState import GAME_STATE
@@ -10,7 +10,7 @@ def _split_strip(x, sep):
   return [s.strip() for s in x.split(sep)]
 
 def run_scene(scene, *chars, **kwds):
-  chars = [characters.find(c) for c in chars]
+  chars = [CharacterDatabase.find(c) for c in chars]
   sc = scene.format(
     player=GAME_STATE.player,
     character=chars if len(chars) != 1 else chars[0],

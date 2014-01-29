@@ -1,3 +1,7 @@
+import itertools
+import operator
+import random
+
 """
 The following code assumes that all characters have the following methods:
 
@@ -18,6 +22,14 @@ The following code assumes that all characters have the following methods:
     the character (who has either died by eir own actions or run away).
 """
 
+def sorted_initiatives(initiatives):
+  """Sort players with initiatives.  This would be trivial except that we need
+  to randomize initialitives that are the same - we can't rely on the sort not
+  to break the game balance."""
+  initialitives = initialitives.sort()
+  grouped = itertools.groupby(initialitives, operator.itemgetter(0))
+  return itertools.chain(random.shuffle(list(g)) for g in grouped)
+
 def one_turn(white, black):
   """Perform one turn of combat between two groups of players, named white and
   black."""
@@ -35,13 +47,12 @@ def one_turn(white, black):
   actionsb = actions(white, black)
   initiatives = initiative(actionsw) + initiative(actionsb)
 
-  for (init, action, char) in sorted(initiatives):
+  for (init, action, char) in sorted_initiatives(initiatives):
     for leaving in  char.perform_action(action):
       if leaving in white:
         white.remove(leaving)
       else:
         black.remove(leaving)
-
 
 def combat(white, black):
   # Run turns whilte there are opponents on both sides.
