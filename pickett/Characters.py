@@ -5,14 +5,10 @@ import Pronoun
 from Properties import Properties
 
 class AbstractCharacter(object):
-  """Abstract base class for all characters in the game.
-  Other interesting information here.
-  """
+  """Abstract base class for all characters in the game."""
   _DESCRIPTION_STRING = (
     'Name = {0.name}, '
-    'Attack Skill = {0.attack_skill}/100, '
     'Character Class = {1}, '
-    'Hit Points = {0.current_hit_points}/{0.hit_points}, '
     'Status: {0.status}, '
     'Gender: {0.gender}, '
     'Disposition: {0.dispo} '
@@ -21,19 +17,14 @@ class AbstractCharacter(object):
 
   _CHARACTERS = set()
 
-  def __init__(self, name, hit_points=0, current_hit_points=0, dispo=0,
-               attack_skill=20, dead=False, status=None, gender=None,
-               **properties):
-    self.name = name
-    self.hit_points = hit_points
-    self.current_hit_points = max(current_hit_points, hit_points)
-    self.dispo = dispo
-    self.attack_skill = attack_skill
-    self.dead = dead
-    self.status = status
-    self.gender = gender or 'm'
-    self.pronoun = Pronoun.PRONOUN[self.gender]
+  def __init__(self, name, dead=False, status=None, gender='m', **properties):
     self.properties = Properties(properties)
+    self.name = name
+    self.dispo = dispo
+    self.dead = dead
+    self.status = status  # TODO: shouldn't "dead" be a status?
+    self.gender = gender
+    self.pronoun = Pronoun.PRONOUN[self.gender]
 
     self._CHARACTERS.add(self)
 
@@ -55,9 +46,10 @@ class Camper(AbstractCharacter):
     super(Camper, self).__init__(name, **kwds)
     self.camper_in_party = camper_in_party
 
-Player('Pickett', gender='m', hit_points=10, current_hit_points=10,
+# TODO: shouldn't we be "rolling" for the stats for the current player?
+Player('Pickett', max_hit_points=10, hit_points=10,
        dull=3, innovative=3, homesick=5, arrogant=1, hopeless=3,
-       passionate=1, angry=2, paranoid=5, apathetic=4, hyperactive=2, #end of stats and moods
+       passionate=1, angry=2, paranoid=5, apathetic=4, hyperactive=2,
        )
 # There's no need to set these properties to 0 - properties start at 0
 # by default.
@@ -70,33 +62,32 @@ Player('Pickett', gender='m', hit_points=10, current_hit_points=10,
        # stand_up_comedy=0, swimming=0, swag=0, taste=0, theater=0,
        # telekenisis=0, telepathy=0)
 
-NonPlayerCharacter('Angles Gator', gender='m')
-NonPlayerCharacter('Barry Fandling', gender='m')
-NonPlayerCharacter('Barret Falster', gender='m')
-NonPlayerCharacter('Playton Williams', gender='m')
+NonPlayerCharacter('Angles Gator')
+NonPlayerCharacter('Barry Fandling')
+NonPlayerCharacter('Barret Falster')
+NonPlayerCharacter('Playton Williams')
 NonPlayerCharacter('Sherry Fandling', gender='f')
-NonPlayerCharacter('Troid', gender='m')
+NonPlayerCharacter('Troid')
 
-Camper('Brent Drago', gender='m')
+Camper('Brent Drago')
 Camper('Botany Lynn', gender='f')
 Camper('Bnola Rae', gender='f')
-Camper('Boris Tortavich', gender='m')
-Camper('Can Tabber', gender='m')
-Camper('Freetus Jaunders', gender='m')
-Camper('Gloobin Marfo', gender='m')
-Camper('Gelliot Yabelor', gender='m')
+Camper('Boris Tortavich')
+Camper('Can Tabber')
+Camper('Freetus Jaunders')
+Camper('Gloobin Marfo')
+Camper('Gelliot Yabelor')
 Camper('Illetia Dorfson', gender='f')
-Camper('Kinser Talebearing', gender='m')
-Camper('Nugget Beano', gender='m')
+Camper('Kinser Talebearing')
+Camper('Nugget Beano')
 Camper('Niche Kaguya', gender='f')
 Camper('Ninar Tetris', gender='f')
-Camper('Pooder Bennet', gender='m')
-Camper('Randy Buffet', gender='m')
+Camper('Pooder Bennet')
+Camper('Randy Buffet')
 Camper('Trinda Noober', gender='f')
 Camper('Trinoba Vyder', gender='')
 Camper('Volga Toober', gender='f')
 Camper('Yeldstat Krong', gender='f')
-
 
 def find(name):
   if isinstance(name, Character):

@@ -47,3 +47,10 @@ def combat(white, black):
   # Run turns whilte there are opponents on both sides.
   while white and black:
     one_turn(white, black)
+
+def weapon_attack(attacker, weapon, victim):
+  # Some attacks might take a weapon and here's a simple framework
+  # for that.
+  result = weapon.attack(attacker, victim)
+  if result:
+    result.apply(attacker, victim)
