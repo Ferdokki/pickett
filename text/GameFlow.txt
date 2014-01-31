@@ -3,18 +3,66 @@ Pickett game events and flow.
 Pickett will play very much like another RenPy game that has gotten some
 critical acclaim from steam and PC gamer, 'Long Live The Queen.'
 Essentially, The game lasts only 3-4 weeks (I have yet to decide through
-playtesting if it should go on for any longer. So, lets begin. 
+playtesting if it should go on for any longer.) So, lets begin. 
+
+Color Scenes: Color scenes will sometimes feature a conversation, or a choice.
+They can sometimes lead to battles or other in game states. normally,
+pictures, music, and text will be changing in color scenes. skill checks can
+take place during a color scene and the outcome could have an effect on the
+content of the scene.           
+
+Conversations: These are scenes in which Pickett is talking to anyone else in
+the game and choosing from a list of options what he is going to say. Usually
+in game what happens is, during a scene an amount of conversations will be
+specified that pickett must have with different player characters before the
+game will move onto the next scene. during these conversations, the
+conversations you choose may have an affect on other NPC stats. 
+
+Skill Checks: Often, in the middle of color scenes, conversations, or special
+battles, the game will tests one of picketts skills to see if he sucseeds in a
+certian action. Usually if he does, it results in a more deserible story
+situation. A check is a d100 roll, sucsess is when it gets equal or under
+picketts skill being checked. Skill checks are the most important mechanic in
+the game as players will be trying to figure out the best character build to
+survive all these checks and make it to the end of the game. 
+
+Battles: Battles are Dragon Warrior style battles in which any characters,
+player, party, or otherwise, that die permanently die. Hence if you fight
+another camper, and kill him, he is unavailible for the rest of the game,
+either in future story scenes or whatever else. It is important to mention
+that for player characters, there are 3 types of weapon skills, blunt, ranged,
+and polearms, which correspond to the stats baseball, archery, and lacrosse.
+
+Moods: Moods are stats that place modifers on learning skills. The most
+prominent mood is selected by whichever mood as the highest interger values,
+but this would be displayed to the user as a vertical slider. there are a
+total of 10 moods and they come in pairs, they are attached to eachother for
+the purpose of figureing out the predominant mood. the prominent mood will
+then bestow a modifer on the learning of all skills, see next paragraph for
+more related info.
+
+Choosing Activities & Mood Modifiers: Another main mechanic of the game, is
+choosing your activities for the day which in turn, raises your skills. When a
+the activities are performed, the skills go up by 10 points, UNLESS their is a
+skill modifer coming from the main mood. depending on how much of a particular
+feeling pickett is feeling at the moment, the modifer can either be positive
+or negative, depeneding on the specific skill category, by 2-8 points, to be
+specified exatctly skill by skill category later, detailed in the unused
+skills dict.
+
+Skills & Skill categories: Im about to fall asleep doing this tomorrow. 
 
 <Day One, Week One>
 
-   INTRO {Bully is chosen here.}
+   INTRO {Bully is chosen here.} [Color Scene]
 
-  -Orientation Happens
+  -Orientation Happens [Color Scene]
 
-  DAY_ONE_WEEK_ONE_OUTSIDE_THEATER [Work in progress]
+  DAY_ONE_WEEK_ONE_OUTSIDE_THEATER [Work in progress] [3 Unique conversations
+must be had until game moves to next state.]
 
-  DAY_ONE_WEEK_ONE_INSIDE_BUNK_NIGHT [Not Completed]
-
+  DAY_ONE_WEEK_ONE_INSIDE_BUNK_NIGHT [3 Unique conversations must be had until
+the game moves to the next state]
 <Day Two, Week One>
   
   DAY_TWO_WEEK_ONE_FLAGPOLE [Not Completed.]
@@ -27,7 +75,6 @@ playtesting if it should go on for any longer. So, lets begin.
   
   -Player engages in activity two.
 
-<<<<<<< HEAD
   -Free Choice (Player chooses an activity from here that affects mood)
 
   DAY_TWO_WEEK_ONE_POOL_PARTY [Not Completed.] {evenining activity}
@@ -40,6 +87,4 @@ playtesting if it should go on for any longer. So, lets begin.
 
   DAY_THREE_WEEK_ONE_LUNCH [Not Completed]
 
-=======
->>>>>>> 039329c4d44df45130f3733191db185728ad10af
 
