@@ -13,10 +13,13 @@ The following code assumes that all characters have the following methods:
     identity of the enemy (or enemies) that the character is attacking - we call
     these "the opponents".
 
-    Executing an action return as a list of the characters that have left combat
+    Executing an action returns a list of the characters that have left combat
     at the end of this action.  This might include some of the opponents (who
     have died) or the character (who has either died by eir own actions or run
     away).
+
+    An action takes a list of messages, and appends any messages it creates to
+    that list.
 
   initiative(action)
     Returns an initiative value, given a choice of action.
@@ -27,27 +30,24 @@ The following code assumes that all characters have the following methods:
 
 """
 
-def sorted_initiatives(initiatives):
-  """Sort players with initiatives.  This would be trivial except that we need
-  to randomize initialitives that are the same - we can't rely on the sort not
-  to break the game balance - and we also need to reverse the list at the end,
-  because we want the highest initiatives to go first!"""
-  initialitives = initialitives.sort()
-  grouped = itertools.groupby(initialitives, operator.itemgetter(0))
-  return reversed(itertools.chain(random.shuffle(list(g)) for g in grouped))
-
-def one_turn(white, black):
+def one_turn(white, black, messages):
   """Perform one turn of combat between two groups of players, named white and
-  black."""
+  black.  Append messages to the messages list."""
 
   def actions(us, them):
-    "Returns a list of (character, action) for each character of us."
-    return [char, char.select_action(us, them) for char in us]
+    """Returns a list of (initiative, character, action for each character
+    in the list "us"."""
+    for character in us:
+      action = char.select_action(us, them)
+      yield character.initiative(action), action
 
-  def initiative(char_actions):
-    """Returns a list of (initiative, character, action), given a list of
-    (character, action) pairs."""
-    return [(char.initiative(action), char, act) for char, act in char_actions]
+  def sorted_by_initiative(initiatives):
+    """Sort players with initiatives.  This would be trivial except that we need
+    to randomize initialitives that are the same - we can't rely on the sort not
+    to break the game balance - and we also need to reverse the list at the end,
+    because we want the highest initiatives to go first!"""
+    grouped = itertools.groupby(sorted(initialitives), operator.itemgetter(0))
+    return reversed(itertools.chain(random.shuffle(list(g)) for g in grouped))
 
   def remove(character):
     if character in white:
@@ -55,18 +55,16 @@ def one_turn(white, black):
     else:
       black.remove(character)
 
-  for char in white + black:
-    char.prepare_for_turn()
+  players = white + blac
+  for character in players:
+    character.prepare_for_turn()
 
-  actionsw = actions(white, black)
-  actionsb = actions(white, black)
-  initiatives = initiative(actionsw) + initiative(actionsb)
-
-  for (init, action, char) in sorted_initiatives(initiatives):
-    for leaving in action() or []:
+  actions = itertools.chain(actions(white, black), actions(black, white))
+  for (_, action) in sorted_by_initiative(actions):
+    for leaving in action(messages) or []:
       remove(leaving)
 
-  for character in white + black:
+  for character in players:
     if character.clean_up_after_turn():
       remove(character)
 

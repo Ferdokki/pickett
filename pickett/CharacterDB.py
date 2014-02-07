@@ -48,6 +48,7 @@ def choose_person(people, message):
       print Messages.BAD_NUMBER_MESSAGE % len(people)
 
 # TODO: shouldn't we be "rolling" for the stats for the current player?
+# TODO: we need to only create this player once the
 Player('Pickett', max_hit_points=10, hit_points=10,
        dull=3, innovative=3, homesick=5, arrogant=1, hopeless=3,
        passionate=1, angry=2, paranoid=5, apathetic=4, hyperactive=2,
