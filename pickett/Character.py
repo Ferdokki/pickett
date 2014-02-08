@@ -90,7 +90,25 @@ class Character(object):
     return '%s(%s)' % (self.__class__.__name__, str(self))
 
 class Player(Character):
-  pass
+  select_action_message = '(A)ttack, (D)efend, (R)etreat? '
+  select_opponent_message = 'Select an opponent (1-%d)'
+  dont_understand_action_message = 'I didn\'t understand your action!'
+
+  def select_action(self, friends, enemies):
+    while True:
+      result = raw_input(self.select_action_message.format(**self)).strip().lower()
+      if result:
+        if 'defend'.startswith(result):
+          return self.defend
+        if 'retreat'.startswith(result):
+          return self.retreat
+        if 'attack'.startswith(result):
+          from CharacterDB import choose_person
+          enemy = choose_person(
+            enemies, self.select_opponent_message.format(**self))
+          return functools.partial(self.attack, enemy)
+        print(dont_understand_action_message.format(**self))
+
 
 class NonPlayerCharacter(Character):
   pass
