@@ -1,0 +1,290 @@
+The young boy has {character.pronoun.possessive} eyes closed. {character.pronoun.subject} is standing with {character.pronoun.possessive} arms outstretched, {character.pronoun.possessive} long robes flowing with a soft breeze. 
+
+{pause}
+
+While {character.pronoun.subject} has no exact facial expression, {character.pronoun.possessive} face holds a look of peace and contentment.
+
+{pause}
+
+{character.pronoun.subject} seems like an interesting person. Maybe {character.pronoun.subject} will talk.
+
+{prompt}
+
+[1. Get {character.pronoun.possessive}  attention.]   (-1)
+[2. Patiently wait for {character.pronoun.possessive}  attention.]  (+1)
+[3. Touch {character.pronoun.possessive}  awesome robe.]  (-2)
+
+If [1.]:  Pickett: Excuse me.
+
+{pause}
+
+The boy abruptly looks up, slightly irritated.
+
+{pause}
+
+Kinser: …Yes?
+
+{pause}
+
+Pickett: Um, hi, I’m [player_name].
+
+{pause}
+
+Kinser: Hello, [player_name]. I am Kinser Talebearing.
+
+{pause}
+
+
+If [2.]: {character.pronoun.subject} seems to be deeply concentrating on something.
+
+{pause}
+
+I respectfully wait for {character.pronoun.object} to finish what {character.pronoun.subject} is doing.
+
+{pause}
+
+After a few minutes, the boy looks up and gently smiles.
+
+{pause}
+
+Kinser: Thank you for waiting.
+
+{pause}
+
+Pickett: No problem. Do you mind if I ask what you were doing?
+
+{pause}
+
+Kinser: I was thanking the wind spirits for this lovely day, and praying for the rest of the days at camp to be this pleasant.
+
+{pause}
+
+Pickett: Cool!
+
+{pause}
+
+The boy is unable to suppress a smile.
+
+{pause}
+
+Kinser: I am Kinser Talebearing. It is nice to meet you.
+
+{pause}
+
+Pickett: Nice to meet you too! I’m [player_name].
+
+{pause}
+
+
+If [3.]: {character.pronoun.possessive} long robes are magnificent-looking. They look so grand flowing in the wind.
+
+{pause}
+
+There are beautiful, intricate tribal designs on the robe. It is also adorned with bright colors.
+
+{pause}
+
+Upon closer examination, it looks like there are small animal details on the robe, such as birds, deer, and horses. The robe itself looks like it’s made from rare buffalo hide.
+
+{pause}
+
+I reach out to touch it…
+
+{pause}
+
+Kinser: Hey!
+Note: He is angry.
+
+{pause}
+
+I have broken the boy’s concentration.
+
+{pause}
+
+Pickett: Sorry for disturbing you. Your robe looked really cool…
+
+{pause}
+
+Kinser: Yeah, but that doesn’t mean you can touch it! This robe is very sacred and important to me!
+
+{pause}
+
+Pickett: I’m sorry. I just wanted to talk to you. My name is [player_name].
+
+{pause}
+
+Kinser:…My name is Kinser Talebearing.
+
+{pause} (end of prompt)
+
+There is a slight movement behind Kinser.
+
+{pause}
+
+It seems to be some sort of creature.
+
+{pause}
+
+Pickett: Hey, what’s that?
+
+{pause}
+
+Kinser: Oh, this is Peego.
+
+{pause}
+
+It’s a weird-looking bird.
+
+{prompt}
+[1. Tell Kinser the bird looks weird.]   (-2)
+[2. Tell Kinser the bird looks beautiful.]  (+1)
+
+If [1.]: Pickett: No offense, but that’s a strange-looking bird.
+
+{pause}
+
+Kinser: No it isn’t! It’s a beautiful animal, just like any other animal!
+Note: He is angry.
+
+{pause}
+
+Kinser: You may feel that Peego is unsightly, but it’s only because most humans do not interact with dodos, and thus they are viewed as stupid and ugly.
+
+{pause}
+
+Kinser: But my Peego is beautiful and intelligent.
+Note: He isn’t angry anymore. You can either have him smile, or just leave the default expression.
+
+{pause}
+
+
+If [3.]: Pickett: Wow, it’s a very unique-looking bird…it looks beautiful.
+
+{pause}
+
+Kinser: Thank you. I agree, dodos are very unique and lovely creatures.
+Note: He is smiling.
+
+{pause}
+
+Kinser: People often misjudge them and think they are stupid animals.
+
+{pause}
+
+Kinser: But Peego is quite the opposite. Peego is one of the most intelligent and caring creatures I have ever come across.
+
+{pause} (end of prompt)
+
+Kinser: Peego is my best friend. Wherever I go, Peego comes with me.
+
+{pause}
+
+Kinser: In fact, I mainly came to this camp so that Peego can get away from the city and temporarily enjoy the wild.
+
+{pause}
+
+Peego is walking around. It comes within arms’ length of me.
+
+{prompt}
+[1. Pet it.]  (-1)
+[2. Leave it be.]   (+2)
+[3. Shoo away the ugly bird.]   (-3)
+
+If [1.]: Its feathers look soft, smooth, and silky, much like Kinser’s hair.
+
+{pause}
+
+I gently reach out and stroke Peego…
+
+{pause}
+
+Kinser: Hey! What are you doing?
+Note: He is angry.
+
+{pause}
+
+Pickett: Oh, I was just petting—
+
+{pause}
+
+Kinser: No! Don’t touch Peego!
+Note: He is still angry.
+
+{pause}
+
+Pickett: S-sorry…
+
+{pause}
+
+
+If [2.]: The bird stands peacefully between Kinser and I.
+
+{pause}
+
+I decide to leave it alone.
+
+{pause}
+
+Kinser:…Peego seems to like you.
+
+{pause}
+
+Pickett: Wow, really?
+
+{pause}
+
+Kinser: Yes. Peego is a smart bird. Unlike documented dodos from centuries ago, Peego only approaches people it trusts, people who Peego feels are harmless.
+
+{pause}
+
+Peego comes and stands by {player.pronoun.possessive} foot.
+
+{pause}
+
+
+If [3.]: Peego is so weird-looking and hideous.
+
+{pause}
+
+I kick my foot in its direction. Peego panics and runs back to Kinser.
+
+{pause}
+
+Kinser: Hey! What’s wrong with you?! What do you think you’re doing?
+Note: He is angry (I guess that was obvious).
+
+{pause}
+
+Pickett: Oh, uh, I-I feel kinda uncomfortable being next to such an unsettling-looking animal.
+
+{pause}
+
+Kinser: Fine. Well I’m sure Peego doesn’t like you either.
+
+{pause} (end of prompt)
+
+Kinser: Well, if you excuse me, I am going to walk around with Peego for awhile so it can get some exercise.
+
+{pause}
+
+Kinser: It was nice to meet you, [player.name].
+
+{pause}
+
+Pickett: Nice to meet you too, Kinser! See you around!
+
+{pause}
+
+Kinser and Peego slowly but peacefully walk around together.
+
+(end)
+
+
+
+If player tries to talk to him again:
+
+Kinser and Peego are walking together. Kinser seems to be focused on something, probably nature.
+
+{pause}
+
+I shouldn’t bother them.
