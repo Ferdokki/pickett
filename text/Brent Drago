@@ -1,0 +1,86 @@
+The boy is quietly singing something. {character.pronoun.subject} stops singing and smiles at me.
+
+{pause}
+
+Brent: Hi there! My name’s {character.name}. What’s your name?
+
+{pause}
+
+Pickett: I’m Pickett {player.lastname}.
+
+{pause}
+
+Brent: It’s nice to meet you!
+
+{pause}
+
+Brent: You may have recognized me. I’m a famous stylist.
+
+{pause}
+
+Brent: I have my own TV show. It’s called, “Beautification with Brent”.
+
+{pause}
+
+Brent: Have you ever watched it?
+
+{prompt}
+
+[1. Yeah, I love it! It’s my favorite show!]  (-1)
+[2. Sorry, I’ve never watched it.]  (+2)
+[3. What makes you think I’d watch a “beautification” show?]  (-2)
+
+If [1.]: Oh, I’m glad you like it! I’m actually taking a break from the show for awhile. Sometimes show biz, fans, and the paparazzi can be a bit too much for a twelve-year-old.
+
+{pause}
+
+If [2.]: Oh, that’s ok. To be honest, I’m actually glad to hear that. I came to this camp wanting to meet normal kids around my age. I get enough correspondence from my fans and the media at home, so coming here and getting to be a normal kid instead of a star is a rare experience for me.
+
+{pause}
+
+If [3.]: Sheesh, sorry for asking!
+
+{pause}
+
+Brent: I’m really excited to be here. I can’t wait for all the activities to start!
+
+{pause}
+Brent: Which activities are you excited for?
+
+{prompt}
+
+[1. I’m excited to do crafts!]  (+2)
+[2. I can’t wait to play some sports!]  (+0)
+[3. None, I wanna go home.]  (-1)
+
+If [1.]: Me too! I love creating and designing things, it’s so much fun!
+
+{pause}
+
+If [2.]: Oh, I’m not all that great at sports. I get injured easily.
+
+{pause}
+
+If [3.]: Aw, come on, we just got started! I’m sure camp’s going to be a lot of fun.
+
+{pause}
+
+Brent: Anyways, it was nice meeting you. See you around!
+
+{pause}
+
+Pickett: Bye, Brent!
+
+{pause}
+
+Brent leaves to introduce himself to the other campers.
+
+(end)
+
+
+
+If player tries to talk to Brent again:
+
+Brent is talking with some of the other campers.
+{pause}
+It would be rude if I try to butt in.
