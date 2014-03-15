@@ -1,0 +1,153 @@
+Strange-looking girl is busily mashing buttons on a strange-looking console. {character.pronoun.subject} either does not notice me, or chooses not to acknowledge me.
+
+{pause}
+
+Pickett: Hello! (he is smiling, trying to be friendly)
+
+{pause}
+
+{character.pronoun.object} eyes briefly look up from behind {character.pronoun.object}cool-looking glasses.
+
+{pause}
+
+{character.pronoun.subject} goes back to button crunching.
+
+{pause}
+
+How should I get her attention?
+{prompt}
+[1. Say “hello” again]  (+0)
+[2. Snatch away {character.pronoun.object} strange device]  (-2)
+[3. Patiently wait for {character.pronoun.object} attention]  (+2)
+
+If [1.]: Pickett: Hello!
+
+{pause}
+
+Girl (since we don’t know her name yet): Yeah, I heard you the first time! Whaddya want loser?
+
+{pause}
+
+Pickett: Uh, nevermind…
+
+{pause}
+
+If [2.]: I don’t think I’ll get much of a conversation from {character.pronoun.object} as long as {character.pronoun.subject} has that gizmo in {character.pronoun.possessive} hand.
+
+{pause}
+
+I take it away from {character.pronoun.object} to get {character.pronoun.possessive} attention.
+
+{pause}
+
+Girl (since we don’t know her name yet): Hey! What’s the big idea?! (she is angry)
+
+{pause}
+
+Pickett: Well, I was trying to get your attention—
+
+{pause}
+
+Girl: Just get lost, dork!
+
+{pause}
+
+{character.pronoun.subject} snatches back {character.pronoun.possessive} console and starts toying with it again.
+
+{pause}
+
+If [3.]: I patiently wait to speak with {character.pronoun.object}.
+
+{pause}
+
+After a few minutes, {character.pronoun.object} suddenly looks up.
+
+{pause}
+
+Girl (since we don’t know her name): Hey, you got any batteries on you?
+
+{pause}
+
+Pickett: Uh…
+
+{pause}
+
+Girl: Oh, nevermind, I think I’ve got some in my pocket.
+
+{pause}
+
+The girl fishes out a couple of batteries from {character.pronoun.possessive} pocket, crams them into {character.pronoun.possessive} gizmo, and continues fiddling with it.
+
+{pause} (end of prompt)
+
+Pickett: Um, if you don’t mind me asking, what is that thing?
+
+{pause}
+
+The girl looks up, a slight glimmer of excitement in {character.pronoun.possessive} eyes.
+
+{pause}
+
+Girl: I call this the Portable L143-5av3r. It kills the boredom in this dump. (she is happy)
+
+{pause}
+
+Pickett: Uh, did you buy that? Because it doesn’t look very well-manufactured…
+
+{pause}
+
+Girl: (angry) No, jerk! I made this on the bus ride! It looks like this because it’s a prototype I made from stuff I snuck in my bags.
+
+{pause}
+
+Girl: (happy again) I’ve already made several improvements on this model. I’ve got enough material to create a second prototype.
+
+{pause}
+
+My reaction:
+{prompt}
+[1. Don’t care]  (-1)
+[2. Be enthusiastic]  (+1)
+
+If [1.]: Oh. Cool, I guess.
+
+{pause}
+
+If [2.]: Wow, that’s pretty neat!
+
+{pause} (end of prompt)
+
+Since I now have {character.pronoun.possessive} attention, I take this opportunity to introduce myself.
+
+{pause}
+
+Pickett: By the way, I’m Pickett [player.lastname].
+
+{pause}
+
+Volga: Oh, I’m Volga.
+
+{pause}
+
+Pickett: (smile) Nice to meet you!
+
+{pause}
+
+Volga: Yeah, whatevs…
+
+{pause}
+
+Volga goes back to working on her L143-5av3r. Guess {character.pronoun.object} doesn’t want to talk right now…
+(end)
+
+
+
+If player tries to talk to Volga again:
+Volga’s still working on her L143-5av3r prototype. She doesn’t look like she wants to be bothered right now.
+
+
+NOTES:
+1. The dialogue seems long, but it’s not too long. It just looks that way because of the prompts.
+2. After writing “Girl”, I wrote “since we don’t know her name”. I just wrote that as an explanation for why I’m calling her “Girl”, it’s not part of the script.
+3. The emotions in parenthesis (ex: “happy”, “smile”, “angry”) are just so appropriate expressions can be used on the sprites.
+4. In case you didn’t catch it, “L143-5av3r” translates to be “Life-Saver”. ^__^ Tee hee.
